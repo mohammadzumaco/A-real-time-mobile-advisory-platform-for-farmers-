@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rice Growing - English / Hausa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f9f0;
+      padding: 30px;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2e8b57;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2e8b57;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #246b44;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .content.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .credit {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 30px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌾 Noman Shinkafa (Rice)</h1>
+
+  <div class="buttons">
+    <button onclick="showContent('english')">Show in English</button>
+    <button onclick="showContent('hausa')">Show in Hausa</button>
+    <button style="background-color: #255426;"><a href="../raining.html">Back to HOME</a></button>
+  </div>
+
+  <div id="content" class="content"></div>
+
+  <div class="credit">Developed for educational purposes - MZUMACO</div>
+
+  <script>
+    const englishText = `
+      <h2>Step-by-Step Rice Growing Process</h2>
+      <p><strong>1. Land Preparation:</strong> Clear the land, till the soil, and level the field for proper water flow.</p>
+      <p><strong>2. Seed Selection:</strong> Choose improved and disease-resistant rice varieties suitable for your area.</p>
+      <p><strong>3. Nursery Preparation:</strong> Sow seeds in a nursery bed for 21–30 days before transplanting.</p>
+      <p><strong>4. Transplanting:</strong> Transplant healthy seedlings into the main field with appropriate spacing.</p>
+      <p><strong>5. Water Management:</strong> Maintain 2–5 cm of standing water for optimum growth.</p>
+      <p><strong>6. Weed Control:</strong> Apply herbicides or hand-weed regularly to prevent competition.</p>
+      <p><strong>7. Fertilization:</strong> Apply NPK and urea fertilizer at recommended rates in stages.</p>
+      <p><strong>8. Pest and Disease Control:</strong> Monitor and apply integrated pest management (IPM).</p>
+      <p><strong>9. Harvesting:</strong> Harvest when 80–85% of grains are golden yellow. Use sickle or harvesters.</p>
+      <p><strong>10. Post-harvest:</strong> Dry grains properly, thresh, clean, and store in moisture-free containers.</p>
+      <p><strong>11. Innovation:</strong> Use technologies like AWD, precision farming, drones, and improved rice breeds to increase yield and reduce cost.</p>
+    `;
+
+    const hausaText = `
+      <h2>Matakan Noman Shinkafa</h2>
+      <p><strong>1. Shirya Gona:</strong> Tsaftace gona, noma kasa, da daidaita fili don ruwa ya rika gudana daidai.</p>
+      <p><strong>2. Zaɓin iri:</strong> Zaɓi irin shinkafa da ta fi jure cuta da kuma dacewa da yankin da kake.</p>
+      <p><strong>3. Shirya Tukunyar Shuka:</strong> Shuka iri a tukunya na kwana 21 zuwa 30 kafin dasa a fili.</p>
+      <p><strong>4. Dasa:</strong> Dasa shuke-shuke cikin fili da tazara mai kyau.</p>
+      <p><strong>5. Sarrafa Ruwa:</strong> Ka tabbatar da ruwa mai zurfi 2–5 cm don shuka ta yi kyau.</p>
+      <p><strong>6. Yaki da Ciyawa:</strong> Yi amfani da maganin ciyawa ko kuma cire da hannu lokaci-lokaci.</p>
+      <p><strong>7. Taki:</strong> Yi amfani da NPK da urea a matakai daban-daban yadda ya kamata.</p>
+      <p><strong>8. Yaki da Kwari da Cututtuka:</strong> Kula da shukar ka, ka yi amfani da hanyoyin IPM don hana kwari.</p>
+      <p><strong>9. Girbi:</strong> A girbe lokacin da kashi 80–85% na hatsi ya zama ruwan zinariya. Yi amfani da gatari ko na’ura.</p>
+      <p><strong>10. Bayan Girbi:</strong> A busar da hatsi sosai, a fasa, a tace, sannan a ajiye a kwantena masu hana danshi.</p>
+      <p><strong>11. Kirkira:</strong> Yi amfani da sabbin fasahohi kamar AWD, aikin gona da na’urori, drones, da sabbin irin shinkafa masu jurewa don samun ribar da ta fi yawa.</p>
+    `;
+
+    function showContent(language) {
+      const content = document.getElementById("content");
+      content.classList.remove("show"); // reset animation
+
+      // Wait 100ms before showing to trigger fade-in
+      setTimeout(() => {
+        content.innerHTML = language === 'english' ? englishText : hausaText;
+        content.classList.add("show");
+      }, 100);
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #046711;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

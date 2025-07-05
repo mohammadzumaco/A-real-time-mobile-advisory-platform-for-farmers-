@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Kankana (Watermelon Guide)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-title-ha">🌾 Noman Kankana</h1>
+    <h1 id="main-title-en" style="display:none;">Watermelon Farming Guide</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html" id="nav-home-ha">Gida</a>
+    <a href="../ABOUTME.HTML" id="nav-about-ha">Game da Mu</a>
+    <a href="../contact.html" id="nav-contact-ha">Tuntube Mu</a>
+
+    <a href="#" id="nav-home-en" style="display:none;">Home</a>
+    <a href="#" id="nav-about-en" style="display:none;">About Us</a>
+    <a href="#" id="nav-contact-en" style="display:none;">Contact Us</a>
+  </nav>
+
+  <!-- Step 1 -->
+  <section id="step1">
+    <h2 id="title1-ha">1. Shirye-shiryen Gona</h2>
+    <p id="content1-ha">
+      Zaɓi ƙasa mai kyau, mai laushi kuma mai kyauwar ban ruwa. Tsabtace filin daga ciyawa, duwatsu, da tarkace kafin shuka kankana. A zagaye filin da itatuwa ko shinge don kiyaye shuka daga kwari da dabbobi.
+    </p>
+    <h2 id="title1-en" style="display:none;">1. Land Preparation</h2>
+    <p id="content1-en" style="display:none;">
+      Choose good, loose, and well-drained soil. Clear the field from weeds, stones, and debris before planting watermelon. Surround the field with trees or fences to protect the crop from pests and animals.
+    </p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 2 -->
+  <section id="step2" style="display:none">
+    <h2 id="title2-ha">2. Zaɓin Iri</h2>
+    <p id="content2-ha">
+      Zaɓi iri na kankana waɗanda suka dace da yanayi da ban ruwa, musamman waɗanda suka jure cututtuka da ƙura. Iri mai kyau yana taimaka wa amfanin gona ya yi yawa kuma ya fi kyau.
+    </p>
+    <h2 id="title2-en" style="display:none;">2. Seed Selection</h2>
+    <p id="content2-en" style="display:none;">
+      Select watermelon seeds suitable for the climate and irrigation, especially those resistant to diseases and pests. Good seeds help increase yield and improve fruit quality.
+    </p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 3 -->
+  <section id="step3" style="display:none">
+    <h2 id="title3-ha">3. Shuka Kankana</h2>
+    <p id="content3-ha">
+      A shuka kankana a cikin ramuka, a bar nisan kusan 60-90cm tsakanin tsire-tsire da 1.5-2m tsakanin layuka. Ban ruwa bayan shuka sosai don ƙasa ta yi danshi sosai. Ban ruwa na farko ya kamata a yi nan da kwanaki 3-5 bayan shuka.
+    </p>
+    <h2 id="title3-en" style="display:none;">3. Planting Watermelon</h2>
+    <p id="content3-en" style="display:none;">
+      Plant watermelon seeds in holes spaced about 60-90cm apart and 1.5-2 meters between rows. Water thoroughly after planting to moisten the soil well. The first watering should be done within 3-5 days after planting.
+    </p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 4 -->
+  <section id="step4" style="display:none">
+    <h2 id="title4-ha">4. Yin Amfani da Taki</h2>
+    <p id="content4-ha">
+      Yi amfani da taki mai nitrogen (N), phosphorus (P), da potassium (K) kamar NPK 15-15-15 kafin shuka da kuma lokacin girma don ƙara yawan kankana da ƙarfafa tsiro.
+    </p>
+    <h2 id="title4-en" style="display:none;">4. Fertilizer Application</h2>
+    <p id="content4-en" style="display:none;">
+      Use fertilizers containing nitrogen (N), phosphorus (P), and potassium (K), such as NPK 15-15-15 before planting and during growth stages to increase watermelon yield and strengthen growth.
+    </p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 5 -->
+  <section id="step5" style="display:none">
+    <h2 id="title5-ha">5. Kulawa da Ciyawa</h2>
+    <p id="content5-ha">
+      A cire ciyawa da ke hana kankana samun hasken rana ta hanyar noman hannu ko amfani da magungunan kashe ciyawa masu dacewa. Yi wannan aiki akai-akai don hana ciyawar shuka da haifar da matsaloli.
+    </p>
+    <h2 id="title5-en" style="display:none;">5. Weed Control</h2>
+    <p id="content5-en" style="display:none;">
+      Remove weeds that block sunlight from the watermelon plants through manual weeding or appropriate herbicides. Perform this regularly to prevent weed growth and problems.
+    </p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 6 -->
+  <section id="step6" style="display:none">
+    <h2 id="title6-ha">6. Kula da Kwari da Cututtuka</h2>
+    <p id="content6-ha">
+      A lura da kwari kamar su ƙwari, da cututtuka kamar ƙura da ƙwayoyin cuta. Idan aka ga tsire-tsire na nuna alamun cuta, cire su nan take don hana yaduwa. Yi amfani da magungunan kashe kwari da cututtuka masu dacewa a lokacin da ya dace.
+    </p>
+    <h2 id="title6-en" style="display:none;">6. Pest and Disease Management</h2>
+    <p id="content6-en" style="display:none;">
+      Watch out for pests such as beetles and diseases like powdery mildew and fungi. Remove infected plants immediately to prevent spread. Use suitable pesticides and fungicides at appropriate times.
+    </p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 7 -->
+  <section id="step7" style="display:none">
+    <h2 id="title7-ha">7. Ban Ruwa Mai Inganci</h2>
+    <p id="content7-ha">
+      A yi ban ruwa akai-akai musamman a lokacin zafi da bushewa. Fara ban ruwa bayan kwanaki 3-5 daga shuka. Kada a yi ban ruwa mai yawa don kada ƙasa ta yi ruwa sosai. Yin amfani da tsarin drip irrigation zai taimaka wajen adana ruwa da inganta shuka.
+    </p>
+    <h2 id="title7-en" style="display:none;">7. Efficient Irrigation</h2>
+    <p id="content7-en" style="display:none;">
+      Water regularly, especially during hot and dry periods. Start watering 3-5 days after planting. Avoid overwatering to prevent waterlogging. Using drip irrigation helps conserve water and improve plant growth.
+    </p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 8 -->
+  <section id="step8" style="display:none">
+    <h2 id="title8-ha">8. Girbi da Ajiya</h2>
+    <p id="content8-ha">
+      Kankana yana girma cikin kwanaki 70-90. A girbe lokacin da kankana ya yi cikakken girma, ya yi laushi, kuma ya zama ja sosai a ciki. A ajiye a wuri mai sanyi da bushewa don kiyaye kankana daga lalacewa.
+    </p>
+    <h2 id="title8-en" style="display:none;">8. Harvesting and Storage</h2>
+    <p id="content8-en" style="display:none;">
+      Watermelon matures in 70-90 days. Harvest when the fruit is fully grown, soft, and deeply red inside. Store in a cool, dry place to prevent spoilage.
+    </p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko / Go Back to Start</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #0c7433;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+<script>
+  // Show next step and hide current
+  function showNext(currentId) {
+    const currentNum = parseInt(currentId.replace('step', ''));
+    const nextNum = currentNum + 1;
+    const currentSection = document.getElementById(currentId);
+    const nextSection = document.getElementById('step' + nextNum);
+    if (nextSection) {
+      currentSection.style.display = 'none';
+      nextSection.style.display = 'block';
+    }
+  }
+
+  // Go back to first step
+  function goBack() {
+    for (let i = 1; i <= 8; i++) {
+      const sec = document.getElementById('step' + i);
+      sec.style.display = (i === 1) ? 'block' : 'none';
+    }
+  }
+
+  // Switch language function: toggle Hausa/English content visibility
+  function switchLang(lang) {
+    if (lang === 'ha') {
+      document.documentElement.lang = 'ha';
+      // Show Hausa titles & content, hide English
+      toggleLang('ha');
+    } else {
+      document.documentElement.lang = 'en';
+      // Show English titles & content, hide Hausa
+      toggleLang('en');
+    }
+  }
+
+  function toggleLang(lang) {
+    const haElements = document.querySelectorAll('[id$="-ha"]');
+    const enElements = document.querySelectorAll('[id$="-en"]');
+    if (lang === 'ha') {
+      haElements.forEach(el => el.style.display = '');
+      enElements.forEach(el => el.style.display = 'none');
+    } else {
+      haElements.forEach(el => el.style.display = 'none');
+      enElements.forEach(el => el.style.display = '');
+    }
+  }
+
+  // Start with Hausa as default
+  switchLang('ha');
+</script>
+
+</body>
+</html>

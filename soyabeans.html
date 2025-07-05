@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soya Beans - English & Hausa Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 0 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button.active {
+      background-color: #004080;
+    }
+
+    #container {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      margin-top: 30px;
+      min-height: 450px;
+    }
+
+    .content {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 1.6;
+      font-size: 18px;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .visible {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    strong {
+      color: #004080;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <button id="btnEnglish" class="active" onclick="showEnglish()">English</button>
+    <button id="btnHausa" onclick="showHausa()">Hausa</button>
+
+  </div>
+
+  <div id="container">
+    <!-- English content -->
+    <div id="english" class="content visible">
+      <h2>🌾Soyabeans Farming </h2>
+
+      <h3>1. Land Preparation</h3>
+      <p>
+        Before planting soybeans, the land must be properly prepared. Soybeans grow best in soft, well-drained soil.
+      </p>
+      <ul>
+        <li>Clear the field of weeds and debris.</li>
+        <li>Use organic manure such as cow or chicken manure to enrich the soil.</li>
+        <li>Check soil conditions; avoid very hard or waterlogged soils.</li>
+      </ul>
+
+      <h3>2. Choosing Soybean Seeds</h3>
+      <p>
+        There are different varieties of soybeans. Choose seeds that suit your local climate and are resistant to pests and diseases.
+      </p>
+
+      <h3>3. Planting Soybeans</h3>
+      <p>
+        The best time to plant soybeans is during the rainy season when water is adequate.
+      </p>
+      <ul>
+        <li>Plant seeds at a depth of about 3-5 cm into the soil.</li>
+        <li>Leave a spacing of about 10-15 cm between plants and 30 cm between rows.</li>
+        <li>Plant in sunny areas to ensure good sunlight for growth.</li>
+      </ul>
+
+      <h3>4. Caring for Soybeans</h3>
+      <p>
+        After planting, proper care is essential to get a good yield:
+      </p>
+      <ul>
+        <li>Water the plants if rainfall is insufficient.</li>
+        <li>Remove weeds regularly to prevent competition for nutrients.</li>
+        <li>Control pests and diseases using appropriate pesticides or traditional methods.</li>
+      </ul>
+
+      <h3>5. Harvesting and Drying</h3>
+      <p>
+        Soybeans are ready for harvest 90 to 120 days after planting when the leaves begin to dry and pods are brown.
+      </p>
+      <ul>
+        <li>Harvest by hand or machine carefully.</li>
+        <li>Dry the soybeans in the shade or a well-ventilated area to avoid spoilage.</li>
+        <li>Store dried beans in a cool, dry place to prevent damage.</li>
+      </ul>
+
+      <h3>6. Uses of Soybeans</h3>
+      <p>
+        Soybeans are very useful in daily life:
+      </p>
+      <ul>
+        <li>Used to make foods like tofu, soy milk, and fried beans.</li>
+        <li>Feed for livestock.</li>
+        <li>Oil extracted is used for cooking and industrial products.</li>
+        <li>Help improve soil fertility by fixing nitrogen.</li>
+      </ul>
+
+      <h3>7. Storage Tips</h3>
+      <p>
+        To keep soybeans fresh and in good condition:
+      </p>
+      <ul>
+        <li>Store in a well-ventilated, dry place away from heat and moisture.</li>
+        <li>Use airtight containers or special bags for storage.</li>
+        <li>Avoid storing near strong-smelling substances.</li>
+        <li>Regularly check stored beans to remove any spoiled or pest-infested beans.</li>
+      </ul>
+
+      <p><strong>By following these steps, you can successfully farm soybeans and benefit from their many uses!</strong></p>
+      <button style="background-color: #255426;"><a href="../raining.html">Back to HOME</a></button>
+    </div>
+
+    <!-- Hausa content -->
+    <div id="hausa" class="content">
+      <h2>🌾Noman Waken Suya</h2>
+
+      <h3>1. Shiri don Noma</h3>
+      <p>
+        Kafin noma waken suya, dole ne a shirya ƙasa sosai. Ana bukatar ƙasa mai kyau, mai laushi, kuma mai kyau wajen shayar da ruwa.
+      </p>
+      <ul>
+        <li>Tsabtace filin daga ciyawa da tarkace.</li>
+        <li>Yi amfani da taki na halitta (kamar shanu ko kaza) domin ƙara ƙarfin ƙasa.</li>
+        <li>Tantance yanayin ƙasa (ba mai ƙasa sosai ba kuma ba mai yawan ruwa sosai ba).</li>
+      </ul>
+
+      <h3>2. Zaben Irin Waken Suya</h3>
+      <p>
+        Akwai nau'ikan waken suya daban-daban da suka dace da yanayin ƙasarka. Ka zabi irin da zai iya jure yanayi da cututtuka a yankinka.
+      </p>
+
+      <h3>3. Noman Waken Suya</h3>
+      <p>
+        Noma waken suya ya fi kyau a lokacin damina lokacin da ruwa ke da yawa.
+      </p>
+      <ul>
+        <li>Yi dasa iri a zurfin kusan 3-5 cm cikin ƙasa.</li>
+        <li>Ajiye tazara tsakanin tsirrai kusan santimita 10-15 da tsakanin layuka kusan santimita 30.</li>
+        <li>Yi dasa irin a wurare masu rana don samun hasken rana sosai.</li>
+      </ul>
+
+      <h3>4. Kulawa da Waken Suya</h3>
+      <p>
+        Bayan dasa, akwai abubuwa da dama da za a kula da su don samun amfanin gona mai kyau:
+      </p>
+      <ul>
+        <li>Yin ban ruwa idan ba damina ba ko ruwa ya yi ƙasa.</li>
+        <li>Furta ciyawa (kawo ciyawa) don hana su shan abinci daga waken suya.</li>
+        <li>Kula da cututtuka da kwari ta hanyar amfani da magunguna masu dacewa ko hanyoyin gargajiya.</li>
+      </ul>
+
+      <h3>5. Girbi da Ajiya</h3>
+      <p>
+        Waken suya zai yi girbi ne bayan kwanaki 90 zuwa 120 bayan dasa, lokacin da ganyayyaki suka fara bushewa kuma wake ya fara bushewa.
+      </p>
+      <ul>
+        <li>A yi amfani da hannu ko inji wajen girbi.</li>
+        <li>Busar da waken suya a inuwa ko a wurin da iska ke yawo domin kaucewa lalacewa.</li>
+        <li>Ajiye waken suya a cikin wuri mai bushe da iska mai kyau don kauce wa malala da kwari.</li>
+      </ul>
+
+      <h3>6. Amfanin Waken Suya</h3>
+      <p>
+        Waken suya yana da amfani sosai a rayuwar yau da kullum:
+      </p>
+      <ul>
+        <li>Ana amfani da shi wajen yin abinci kamar tofu, madarar soya, da wake mai soyayye.</li>
+        <li>Waken suya na taimakawa wajen ciyar da dabbobi.</li>
+        <li>Mai da aka samu daga waken suya na da amfani wajen yin man fetur da sauran kayayyakin masana’antu.</li>
+        <li>Yana ƙara ƙarfin ƙasa ta hanyar ɗaukar nitrogen.</li>
+      </ul>
+
+      <h3>7. Ajiya da Tsare Waken Suya</h3>
+      <p>
+        Don kiyaye ingancin waken suya:
+      </p>
+      <ul>
+        <li>Ajiye a wurin da iska ke yawo, ba tare da zafi ko danshi ba.</li>
+        <li>Yi amfani da kwantena masu rufewa sosai ko jakunkuna na musamman.</li>
+        <li>Guji ajiye tare da abubuwa masu wari ko mai ƙamshi sosai.</li>
+        <li>A duba lokaci zuwa lokaci don kawar da wake da suka lalace ko kwari suka ci.</li>
+      </ul>
+
+      <p><strong>Ta wannan hanyar, za ka iya noma waken suya yadda ya kamata kuma ka samu amfanin gona mai yawa da amfani a rayuwa!</strong></p>
+    </div>
+  </div>
+
+  <script>
+    const englishDiv = document.getElementById('english');
+    const hausaDiv = document.getElementById('hausa');
+    const btnEnglish = document.getElementById('btnEnglish');
+    const btnHausa = document.getElementById('btnHausa');
+
+    function showEnglish() {
+      englishDiv.classList.add('visible');
+      hausaDiv.classList.remove('visible');
+      btnEnglish.classList.add('active');
+      btnHausa.classList.remove('active');
+    }
+
+    function showHausa() {
+      hausaDiv.classList.add('visible');
+      englishDiv.classList.remove('visible');
+      btnHausa.classList.add('active');
+      btnEnglish.classList.remove('active');
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #07863c;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

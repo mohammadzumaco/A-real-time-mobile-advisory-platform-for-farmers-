@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zumaco Farmer's Advisory</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      animation: bgAnimation 9s infinite;
+    }
+
+    @keyframes bgAnimation {
+      0% { background-color: rgba(0, 0, 0, 0.388); }
+      50% { background-color: rgb(73, 152, 248); }
+      100% { background-color: green; }
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 50px;
+    
+    }
+
+    .image-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeInOut 6s infinite;
+      margin-top: 20px;
+      border: 2px solid #092030;
+      padding: 5px;
+      border-radius: 8px;
+      border: double 8px rgb(9, 97, 7) ;
+    }
+
+    .image-box img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    
+    .image-box:nth-child(2) img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .image-box:nth-child(1) { animation-delay: 1s; }
+    .image-box:nth-child(2) { animation-delay: 4s; }
+    .image-box:nth-child(3) { animation-delay: 2s; }
+
+    .text-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .main-text {
+      font-size: 24px;
+      font-weight: bold;
+      animation: textColors 6s infinite;
+    }
+
+    .sub-text {
+      font-size: 16px;
+      animation: fadeInOut 6s infinite;
+    }
+
+    .ending-animation {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+    }
+
+    #ending-image {
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      transition: all 2s ease-in-out;
+      border: double 4px rgb(5, 205, 185);
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes textColors {
+      0% { color: rgb(8, 39, 62); }
+      20% { color: orange; }
+      40% { color: brown; }
+      60% { color: green; }
+      80% { color: maroon; }
+      100% { color: purple; }
+    }
+
+    @keyframes growImage {
+      from {
+        width: 0;
+        height: 0;
+        visibility: visible;
+      }
+      to {
+        width: 200px;
+        height: 200px;
+        visibility: visible;
+      }
+    }
+
+    body.ending .ending-animation {
+      visibility: visible;
+    }
+
+    body.ending #ending-image {
+      animation: growImage 1.5s forwards;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="image-container">
+    <div class="image-box">
+      <img src="./images/2.jpeg" alt="Image 2">
+      <p>Patience (ka zama mai hakuri)</p>
+    </div>
+    <div class="image-box">
+      <img src="./images/3.jpeg" alt="Image 3">
+      <p>Knowledgeable (ka nemi ilimi)</p>
+    </div>
+    <div class="image-box">
+      <img src="./images/4.jpeg" alt="Image 4">
+      <p>Adaptability (ka zama mai kula da lokaci)</p>
+    </div>
+  </div>
+
+  <div class="text-container">
+    <h1 class="main-text">WELCOME TO MOHAMMAD ZUMACO FARMER'S ADVISORY PLATFORM</h1>
+    <p class="sub-text">We are here to assist you in your farming activity ©Mzumaco2025</p>
+  </div>
+
+  <div class="ending-animation">
+    <img src="./images/my picture.jpg" alt="Your Picture" id="ending-image">
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.body.classList.add('ending');
+      setTimeout(() => {
+        window.location.href = './second.html';
+      }, 2000);
+    }, 9000); 
+  </script>
+</body>
+</html>

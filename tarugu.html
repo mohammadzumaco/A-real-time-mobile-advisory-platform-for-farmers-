@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Tarugu (Chili Guide)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #b22222; /* chili red */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #b22222;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #8b0000; /* darker chili red */
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #b22222;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #b22222;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #8b0000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-title-ha">🌾 Noman Tarugu (Chili)</h1>
+    <h1 id="main-title-en" style="display:none;">Chili (Tarugu) Farming Guide</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html" id="nav-home-ha">Gida</a>
+    <a href="../ABOUTME.HTML" id="nav-about-ha">Game da Mu</a>
+    <a href="../contact.html" id="nav-contact-ha">Tuntube Mu</a>
+
+    <a href="#" id="nav-home-en" style="display:none;">Home</a>
+    <a href="#" id="nav-about-en" style="display:none;">About Us</a>
+    <a href="#" id="nav-contact-en" style="display:none;">Contact Us</a>
+  </nav>
+
+  <!-- Step 1 -->
+  <section id="step1">
+    <h2 id="title1-ha">1. Shirye-shiryen Gona</h2>
+    <p id="content1-ha">
+      Zaɓi ƙasa mai kyau, mai laushi da kyauwar ban ruwa. Tarugu na buƙatar ƙasa mai ɗan ɗumi da busasshiyar ƙasa don hana tsananin ruwa da lalata tsire-tsire. Tsabtace filin daga ciyawa da tarkace kafin shuka.
+    </p>
+    <h2 id="title1-en" style="display:none;">1. Land Preparation</h2>
+    <p id="content1-en" style="display:none;">
+      Choose good, loose soil with proper drainage. Chili peppers require warm, well-drained soil to prevent waterlogging and plant damage. Clear the field of weeds and debris before planting.
+    </p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 2 -->
+  <section id="step2" style="display:none">
+    <h2 id="title2-ha">2. Zaɓin Iri</h2>
+    <p id="content2-ha">
+      Zaɓi iri na tarugu waɗanda suka dace da yanayin ku. Ana samun iri masu ɗanɗano mai ƙarfi da waɗanda suke da ɗan taushi. Zaɓi iri masu jure cututtuka da kwari don samun girbi mai kyau.
+    </p>
+    <h2 id="title2-en" style="display:none;">2. Seed Selection</h2>
+    <p id="content2-en" style="display:none;">
+      Select chili pepper varieties suitable for your climate. There are hot and mild types. Choose seeds resistant to pests and diseases for a better harvest.
+    </p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 3 -->
+  <section id="step3" style="display:none">
+    <h2 id="title3-ha">3. Shuka Tarugu</h2>
+    <p id="content3-ha">
+      A shuka iri a cikin layuka ko ramuka, a bar nisan kusan 30-50cm tsakanin tsire-tsire da 60-75cm tsakanin layuka. Ana iya fara shuka a cikin masaka sannan a dasa a waje bayan tsiro.
+    </p>
+    <h2 id="title3-en" style="display:none;">3. Planting Chili</h2>
+    <p id="content3-en" style="display:none;">
+      Plant seeds in rows or holes, spacing about 30-50cm between plants and 60-75cm between rows. Seeds can be started in nurseries and transplanted outdoors after seedlings develop.
+    </p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 4 -->
+  <section id="step4" style="display:none">
+    <h2 id="title4-ha">4. Yin Amfani da Taki</h2>
+    <p id="content4-ha">
+      Yi amfani da taki mai nitrogen (N), phosphorus (P), da potassium (K) musamman NPK 15-15-15 ko taki na gargajiya lokacin shuka da girma don ƙara yawan amfanin gona. Ana iya amfani da taki na zamani ko na dabbobi.
+    </p>
+    <h2 id="title4-en" style="display:none;">4. Fertilizer Application</h2>
+    <p id="content4-en" style="display:none;">
+      Use fertilizers containing nitrogen (N), phosphorus (P), and potassium (K), especially NPK 15-15-15 or organic manure at planting and during growth to increase yield. Modern or animal manure fertilizers can be used.
+    </p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 5 -->
+  <section id="step5" style="display:none">
+    <h2 id="title5-ha">5. Ban Ruwa (Irrigation)</h2>
+    <p id="content5-ha">
+      Tarugu na buƙatar ban ruwa mai kyau da tsari, musamman lokacin bushewa. Yi ban ruwa sau 2-3 a mako, ko amfani da drip irrigation domin kiyaye danshi a ƙasa ba tare da ɓata ruwa ba. Guji tsananin ruwa don hana lalacewar tsire.
+    </p>
+    <h2 id="title5-en" style="display:none;">5. Irrigation</h2>
+    <p id="content5-en" style="display:none;">
+      Chili requires proper and regular watering, especially during dry periods. Water 2-3 times a week or use drip irrigation to conserve soil moisture without wasting water. Avoid overwatering to prevent plant damage.
+    </p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 6 -->
+  <section id="step6" style="display:none">
+    <h2 id="title6-ha">6. Kare Tsire-Tsire daga Kwari da Cututtuka</h2>
+    <p id="content6-ha">
+      Kula da kwari kamar su aphids, spider mites, da cututtuka kamar ƙurar farin (powdery mildew). Yi amfani da magungunan kashe kwari da fungicides masu dacewa, sannan a cire tsire-tsire masu cutarwa don hana yaduwa.
+    </p>
+    <h2 id="title6-en" style="display:none;">6. Pest and Disease Control</h2>
+    <p id="content6-en" style="display:none;">
+      Monitor for pests like aphids, spider mites, and diseases such as powdery mildew. Use appropriate pesticides and fungicides, and promptly remove infected plants to prevent spread.
+    </p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 7 -->
+  <section id="step7" style="display:none">
+    <h2 id="title7-ha">7. Girbi da Ajiye Tarugu</h2>
+    <p id="content7-ha">
+      Tarugu na shirya girbi bayan kwanaki 70 zuwa 90 daga shuka. A yanke tarugu lokacin da suka yi ja ko kore, a kula kada su yi tsufa a gona. A ajiye su a wuri mai sanyi da iska mai kyau don tsawaita rayuwa.
+    </p>
+    <h2 id="title7-en" style="display:none;">7. Harvesting and Storage</h2>
+    <p id="content7-en" style="display:none;">
+      Chilies are ready to harvest 70 to 90 days after planting. Pick them when red or green, avoid over-maturity in the field. Store in a cool, well-ventilated place to extend shelf life.
+    </p>
+    <button class="step-btn" onclick="restartGuide()">Fara Daga Farko / Restart</button>
+  </section>
+
+  <script>
+    function switchLang(lang) {
+      const isHausa = lang === 'ha';
+      document.getElementById('main-title-ha').style.display = isHausa ? 'block' : 'none';
+      document.getElementById('main-title-en').style.display = isHausa ? 'none' : 'block';
+
+      ['nav-home', 'nav-about', 'nav-contact'].forEach(id => {
+        document.getElementById(id + '-ha').style.display = isHausa ? 'inline' : 'none';
+        document.getElementById(id + '-en').style.display = isHausa ? 'none' : 'inline';
+      });
+
+      for(let i=1; i<=7; i++) {
+        document.getElementById('title'+i+'-ha').style.display = isHausa ? 'block' : 'none';
+        document.getElementById('content'+i+'-ha').style.display = isHausa ? 'block' : 'none';
+        document.getElementById('title'+i+'-en').style.display = isHausa ? 'none' : 'block';
+        document.getElementById('content'+i+'-en').style.display = isHausa ? 'none' : 'block';
+      }
+    }
+
+    function showNext(currentStep) {
+      const stepNum = parseInt(currentStep.replace('step',''));
+      const currentSection = document.getElementById(currentStep);
+      const nextStep = 'step' + (stepNum + 1);
+      const nextSection = document.getElementById(nextStep);
+
+      if (nextSection) {
+        currentSection.style.display = 'none';
+        nextSection.style.display = 'block';
+      }
+    }
+
+    function restartGuide() {
+      for(let i=1; i<=7; i++) {
+        document.getElementById('step'+i).style.display = i === 1 ? 'block' : 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

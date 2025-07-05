@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Tashi (Chilli)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌾Noman Tashi (Chilli)</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../raining.html">Back to irrigation</a>
+
+  </nav>
+
+  <section id="step1">
+    <h2 id="title1">1. Shirye-shiryen Gona</h2>
+    <p id="content1">Zaɓi ƙasa mai kyau, mai kyau wadda ke da danshi amma ba ruwa mai yawa ba. Tsabtace filin daga ciyawa da duwatsu kafin shuka tashi.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">Zaɓi irin tashi mai kyau da lafiya, wanda ya dace da yanayin ƙasa da yanayi na yankinku.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Shuka Tashi</h2>
+    <p id="content3">A shuka irin tashi a cikin ramuka ko tsirrai a nisan kusan 40-50cm tsakanin tsirrai, da 60-75cm tsakanin layi.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Yin Amfani da Taki</h2>
+    <p id="content4">A yi amfani da taki mai kyau mai ɗauke da nitrogen, phosphorus, da potassium kafin shuka da kuma lokacin girma.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Kulawa da Ciyawa</h2>
+    <p id="content5">A yi amfani da noman hannu ko magunguna don kawar da ciyawa da ke hana tashi samun isasshen hasken rana.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Kula da Kwari da Cututtuka</h2>
+    <p id="content6">A lura da kwari irin su tsutsa da kuma cututtuka kamar su ƙwayar cuta da ƙurar fata. Yi amfani da magunguna masu dacewa idan ya zama dole.</p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Girbi Tashi</h2>
+    <p id="content7">Tashi yana girma cikin kwanaki 70-90. A girbe lokacin da 'ya'yan suka fara canza launi daga kore zuwa ja ko rawaya, bisa nau'in iri.</p>
+    <button class="step-btn" onclick="showNext('step8')">Gaba</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8">8. Ajiya da Amfani</h2>
+    <p id="content8">A ajiye tashi a wuri mai bushe da iska. Ana amfani da tashi a girke-girke daban-daban, musamman don ƙara ɗanɗano mai ƙarfi.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+
+  <script>
+    const hausaSteps = [
+      "Shirye-shiryen Gona",
+      "Zaɓin Iri",
+      "Shuka Tashi",
+      "Yin Amfani da Taki",
+      "Kulawa da Ciyawa",
+      "Kula da Kwari da Cututtuka",
+      "Girbi Tashi",
+      "Ajiya da Amfani"
+    ];
+
+    const hausaContents = [
+      "Zaɓi ƙasa mai kyau, mai kyau wadda ke da danshi amma ba ruwa mai yawa ba. Tsabtace filin daga ciyawa da duwatsu kafin shuka tashi.",
+      "Zaɓi irin tashi mai kyau da lafiya, wanda ya dace da yanayin ƙasa da yanayi na yankinku.",
+      "A shuka irin tashi a cikin ramuka ko tsirrai a nisan kusan 40-50cm tsakanin tsirrai, da 60-75cm tsakanin layi.",
+      "A yi amfani da taki mai kyau mai ɗauke da nitrogen, phosphorus, da potassium kafin shuka da kuma lokacin girma.",
+      "A yi amfani da noman hannu ko magunguna don kawar da ciyawa da ke hana tashi samun isasshen hasken rana.",
+      "A lura da kwari irin su tsutsa da kuma cututtuka kamar su ƙwayar cuta da ƙurar fata. Yi amfani da magunguna masu dacewa idan ya zama dole.",
+      "Tashi yana girma cikin kwanaki 70-90. A girbe lokacin da 'ya'yan suka fara canza launi daga kore zuwa ja ko rawaya, bisa nau'in iri.",
+      "A ajiye tashi a wuri mai bushe da iska. Ana amfani da tashi a girke-girke daban-daban, musamman don ƙara ɗanɗano mai ƙarfi."
+    ];
+
+    const englishSteps = [
+      "Land Preparation",
+      "Seed Selection",
+      "Chilli Planting",
+      "Fertilization",
+      "Weed Control",
+      "Pest and Disease Management",
+      "Chilli Harvesting",
+      "Storage and Usage"
+    ];
+
+    const englishContents = [
+      "Choose good, well-drained soil with moderate moisture. Clear the field of weeds and stones before planting chilli.",
+      "Select good, healthy chilli seeds suitable for your soil and climate conditions.",
+      "Plant chilli seeds or seedlings in holes or rows spaced about 40-50cm between plants and 60-75cm between rows.",
+      "Apply good fertilizers containing nitrogen, phosphorus, and potassium before planting and during growth.",
+      "Use manual weeding or herbicides to remove weeds that block sunlight to chilli plants.",
+      "Monitor pests such as aphids and diseases like bacterial and fungal infections. Use appropriate pesticides if necessary.",
+      "Chilli matures in 70-90 days. Harvest when the fruits start changing color from green to red or yellow, depending on the variety.",
+      "Store chilli in a dry, ventilated place. Chilli is used in various dishes to add strong flavor and heat."
+    ];
+
+    function showNext(id) {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById("step1").style.display = "block";
+    }
+
+    function switchLang(lang) {
+      const titles = document.querySelectorAll("h2[id^='title']");
+      const contents = document.querySelectorAll("p[id^='content']");
+      for (let i = 0; i < titles.length; i++) {
+        titles[i].innerText = lang === 'ha' ? (i + 1) + ". " + hausaSteps[i] : (i + 1) + ". " + englishSteps[i];
+        contents[i].innerText = lang === 'ha' ? hausaContents[i] : englishContents[i];
+      }
+      // Also update header title
+      document.querySelector("header h1").innerText = lang === 'ha' ? "🌾Noman Tashshi (Chilli)" : "Chilli Farming Guide";
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #0c6b0a;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

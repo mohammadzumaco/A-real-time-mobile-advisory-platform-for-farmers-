@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers' Advisory Platform</title>
+    <style>
+   body {
+            background-image: url('../images/BAGROUND.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #9c0000;
+            padding: 10px;
+            text-align: center;
+        }
+        header .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        header .navbar ul li {
+            display: inline;
+        }
+        header .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        header .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+
+        .welcome-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .welcome-section h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .welcome-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .farming-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .farming-options a {
+            width: 45%;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(9, 89, 88);
+        }
+        span{
+            color: #ffffff;
+            margin-top: 100%;
+            width: 100%;
+            font-weight: bold;
+       
+        }
+        .farming-options img {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 8px;
+            box-shadow: 0px 0px 12px 5px rgba(0, 17, 11, 0.8);
+            border: double ;
+        }
+        .remark {
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #910505;
+            color: white;
+            font-size: 14px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../second.html">Home</a></li>
+                <li><a href="../ABOUTME.HTML">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <h1 style="font-weight: bolder; text-shadow: 0px 2px rgb(73, 255, 246); font-size: 30px;">WELCOME TO MZUMACO FARMER's</h1>
+            <h1 style="text-shadow:2px 2px rgb(6, 184, 224);">Advisory Platform</h1><br><br>
+            <p style="font-weight: bolder;color: rgb(10, 66, 56); text-shadow:2px 2px whitesmoke;font-size: 20px;">Select a farming method below:</p>
+            <div class="farming-options">
+
+                <a href="./irrigation/irrigation.html">
+                    <img src="./irrigation/irrigation.png" alt="Irrigation Farming">
+                    <span>Irrigation Farming (Noman Rani)</span>
+                </a>
+                <a href="./raining/raining.html">
+                    <img src="./irrigation/images/raining.jpeg" alt="Raining Farming">
+                    <span>Raining Farming (Noman Damina)</span>
+                </a>
+                <div class="remark">Remark: Choose between irrigation and rain-fed farming based on your location and resources. <span style="color: #910505;">{Sharhi: Zaɓi tsakanin noma da ban ruwa ko kuma noma da ruwan sama bisa ga wurin da kake da kuma albarkatun da kake da su}</span></div>
+
+                <a href="./BUYSEED.HTML">
+                    <img src="./images/EXCHANGE.jpeg" alt="Buy Seed"><br><br>
+                    <span>BUY SEED (DOMIN SAYEN IRI)</span>
+                </a>
+                <a href="advisor.html">
+                    <img src="./images/logo.png" alt="Ask Advisor"><br><br>
+                    <span>Ask Advisor (Domin Tambaya)</span>
+                </a>
+                <div class="remark">Remark: Purchase quality seeds or consult an advisor for farming techniques. <span style="color: #910505;"> {Sharhi: Saya iri mai inganci ko kuma tuntuɓi masani don samun shawara kan noma.}</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; MZUMACO 2025
+    </footer>
+
+ 
+
+</body>
+</html>

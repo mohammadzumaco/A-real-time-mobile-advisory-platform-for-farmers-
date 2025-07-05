@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Farming</title>
+    <style>
+        body {
+            background-image: url('./images/irrigation.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #a5d79f;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: rgb(0, 0, 0);
+        }
+
+        header {
+            background-color: #61d86b;
+            padding: 10px 0;
+            font-weight: bolder;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .crop-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .crop-list a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .crop-list a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .crop-list img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 10px;
+            box-shadow: 0 0 10px 4px rgb(0, 0, 0);
+            border: 4px solid transparent;
+            animation: glow-border 2s infinite alternate;
+        }
+
+        .crop-list span {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        h1 {
+            background-color: rgb(90, 172, 90);
+            border-radius: 10px;
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgb(255, 255, 255), -2px -2px 4px rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+        }
+
+        @keyframes glow-border {
+            0% {
+                border-color: rgba(0, 255, 0, 0.5);
+            }
+            100% {
+                border-color: rgba(3, 69, 14, 0.8);
+            }
+        }
+
+        @media (min-width: 600px) {
+            .crop-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../second.html">Home</a></li>
+                <li><a href="../ABOUTME.HTML">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Irrigation Farming {NOMAN RANI}</h1>
+        <div class="crop-list">
+            <a href="tattasai.html">
+                <img src="./images/bell pepper.jpeg" alt="pepper">
+                <span>bell pepper (TATTASAI)</span>
+            </a>
+            <a href="albasa.html">
+                <img src="./images/onions.jpeg" alt="onions">
+                <span>onions (ALBASA)</span>
+            </a>
+            <a href="kokumba.html">
+                <img src="./images/cabage.webp" alt="cabage">
+                <span>cabbage (KABEJI)</span>
+            </a>
+            <a href="kankana.html">
+                <img src="./images/WATER MILLON.jpeg" alt="watermelon">
+                <span>watermelon (KANKANA)</span>
+            </a>
+            <a href="latas.html">
+                <img src="./images/LATAS.jpeg" alt="LATAS">
+                <span>kale (LATAS)</span>
+            </a>
+            <a href="kokumba.html">
+                <img src="./images/KUKUMBA.jpeg" alt="KOKUMBA">
+                <span>cucumber</span>
+            </a>
+            <a href="tarugu.html">
+                <img src="./images/TARUGU.jpeg" alt="TARUGU">
+                <span>CHILI (TARUGU)</span>
+            </a>
+            <a href="tumatari.html">
+                <img src="./images/tomato.webp" alt="tomato">
+                <span>TOMATO (Tomato)</span>
+            </a>
+            <a href="tasgshi.html">
+                <img src="./images/TASHI.jpeg" alt="tASHI">
+                <span>pepper (TASHSHI)</span>
+            </a>
+            <a href="dankalinturawa.html">
+                <img src="./images/potatoes.jpeg" alt="DANKALIN TURAWA">
+                <span>POTATO (DANKALIN TURAWA)</span>
+            </a>
+            <a href="dankalinhausa.html">
+                <img src="./images/DANKALIN HAUSA.jpeg" alt="DANKALIN HAUSA">
+                <span>SWEET POTATO (DANKALIN HAUSA)</span>
+            </a>
+            <a href="KARAS.HTML">
+                <img src="./images/KARAS.jpeg" alt="KARAS">
+                <span>CARROT (KARAS)</span>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

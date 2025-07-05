@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Chatbot Panel - ChatGPT Style</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #202123;
+    color: #ececf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    height: 90vh;
+    border-radius: 8px;
+    background-color: #343541;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  .top-bar {
+    background-color: #444654;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .home-btn {
+    background: linear-gradient(135deg, #ffffff 0%, #0080ff 100%);
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .home-btn:hover {
+    background: linear-gradient(135deg, #ffffff 0%, #4a90e2 100%);
+  }
+  .chat-header {
+    flex-grow: 1;
+    font-weight: 600;
+    font-size: 1.25rem;
+    user-select: none;
+    color: #ececf1;
+  }
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .message {
+    max-width: 80%;
+    padding: 12px 18px;
+    border-radius: 20px;
+    line-height: 1.4;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .user-message {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #4a90e2 0%, #357ABD 100%);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+  .bot-message {
+    align-self: flex-start;
+    background-color: #444654;
+    color: #ddd;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-input-container {
+    display: flex;
+    padding: 15px 20px;
+    background-color: #40414f;
+    border-top: 1px solid #555;
+  }
+  .chat-input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    background-color: #202123;
+    color: #ececf1;
+    outline: none;
+  }
+  .chat-input::placeholder {
+    color: #888;
+  }
+  .send-btn {
+    margin-left: 15px;
+    background: linear-gradient(135deg, #4a90e2 0%, #357ABD 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 0 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .send-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #357ABD 0%, #4a90e2 100%);
+  }
+  .send-btn:disabled {
+    background: #6b6e75;
+    cursor: not-allowed;
+  }
+  /* Scrollbar */
+  .chat-messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  .chat-messages::-webkit-scrollbar-track {
+    background: #343541;
+  }
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: #5a5d68;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+  <div class="chat-container" role="main" aria-label="AI Chatbot">
+    <div class="top-bar">
+      <button class="home-btn" id="homeBtn" aria-label="Back to Home"><a href="./inrdex.html">Back to Home</a></button>
+      <div class="chat-header"> Mzumaco AI Chatbot (Just type Crop Name in Hausa its summary will affare)</div>
+    </div>
+    <div class="chat-messages" id="chatMessages" tabindex="0"></div>
+    <form id="chatForm" class="chat-input-container" aria-label="Send message form">
+      <input
+        type="text"
+        id="userInput"
+        class="chat-input"
+        placeholder="Ask me anything..."
+        autocomplete="off"
+        required
+        aria-required="true"
+        aria-label="Type your message"
+      />
+      <button type="submit" class="send-btn" id="sendBtn">Send</button>
+    </form>
+  </div>
+  <script>
+    const chatMessages = document.getElementById('chatMessages');
+    const chatForm = document.getElementById('chatForm');
+    const userInput = document.getElementById('userInput');
+    
+    let pendingSuggestion = null; // stores suggested crop if spelling was wrong
+    
+    const cropData = {
+  masara: { name: "Maize (Masara)", steps: "1. Land preparation\n2. Seed selection\n3. Planting\n4. Fertilizer application\n5. Weeding\n6. Harvesting", days: "90 to 120 days" },
+  dawa: { name: "Guinea corn (Dawa)", steps: "1. Select well-drained soil\n2. Plough and harrow\n3. Sow seeds\n4. Apply fertilizer\n5. Weed\n6. Harvest", days: "110 to 130 days" },
+  ridi: { name: "Sesame (Ridi)", steps: "1. Clear land\n2. Make seed beds\n3. Plant ridi seeds\n4. Watering\n5. Pest control\n6. Harvest", days: "85 to 100 days" },
+  shinkafa: { name: "Rice (Shinkafa)", steps: "1. Prepare lowland or irrigated fields\n2. Soak seeds\n3. Transplant seedlings\n4. Water management\n5. Weed control\n6. Harvest", days: "120 to 150 days" },
+  gero: { name: "Sorghum (Gero)", steps: "1. Land preparation\n2. Seed sowing\n3. Fertilizer application\n4. Weed control\n5. Pest management\n6. Harvest", days: "100 to 140 days" },
+  kuka: { name: "Baobab leaves (Kuka)", steps: "1. Select nursery\n2. Sow seeds\n3. Transplant seedlings\n4. Water regularly\n5. Harvest leaves", days: "60 to 90 days" },
+  kubewa: { name: "Okra (Kubewa)", steps: "1. Land preparation\n2. Sow seeds\n3. Weed regularly\n4. Pest control\n5. Harvest pods", days: "50 to 60 days" },
+  tumatir: { name: "Tomato (Tumatir)", steps: "1. Nursery preparation\n2. Sow seeds\n3. Transplant seedlings\n4. Fertilizer application\n5. Pest and disease control\n6. Harvest", days: "60 to 75 days" },
+  tattasai: { name: "Pepper (Tattasai)", steps: "1. Nursery sowing\n2. Transplant seedlings\n3. Watering\n4. Pest management\n5. Harvest", days: "75 to 90 days" },
+  albasar: { name: "Onion (Albasar)", steps: "1. Land preparation\n2. Sow seeds or sets\n3. Weed control\n4. Pest management\n5. Harvest", days: "90 to 120 days" },
+  kabewa: { name: "Pumpkin (Kabewa)", steps: "1. Land preparation\n2. Sow seeds\n3. Weed control\n4. Pest management\n5. Harvest", days: "90 to 110 days" },
+  zogale: { name: "Neem (Zogale)", steps: "1. Nursery sowing\n2. Transplant seedlings\n3. Water regularly\n4. Weed control\n5. Harvest seeds", days: "120 to 150 days" },
+  agushi: { name: "Melon seeds (Agushi)", steps: "1. Land preparation\n2. Sow seeds\n3. Watering\n4. Weed control\n5. Harvest", days: "70 to 100 days" },
+  kabewa_kankana: { name: "Watermelon (Kabewa Kankana)", steps: "1. Land preparation\n2. Sow seeds\n3. Fertilizer application\n4. Weed control\n5. Harvest", days: "85 to 100 days" },
+  
+  // Additional crops
+  dankali: { name: "Potato (Dankali)", steps: "1. Prepare loose soil\n2. Plant tubers\n3. Water regularly\n4. Apply fertilizer\n5. Pest and disease control\n6. Harvest", days: "90 to 120 days" },
+  ayaba: { name: "Banana (Ayaba)", steps: "1. Clear land\n2. Dig holes and plant suckers\n3. Apply organic fertilizer\n4. Watering\n5. Remove suckers\n6. Harvest", days: "240 to 300 days" },
+  kwakwa: { name: "Coconut (Kwakwa)", steps: "1. Dig planting pits\n2. Plant coconut seedlings\n3. Water regularly\n4. Apply compost\n5. Weed control\n6. Harvest", days: "360 to 450 days" },
+  dankalin_hausa: { name: "Sweet Potato (Dankalin Hausa)", steps: "1. Prepare land\n2. Plant vines or tubers\n3. Water occasionally\n4. Weed regularly\n5. Harvest", days: "90 to 120 days" },
+  wake: { name: "Beans (Wake)", steps: "1. Land preparation\n2. Sow seeds\n3. Weed regularly\n4. Monitor for pests\n5. Harvest pods", days: "60 to 90 days" },
+  gyada: { name: "Groundnut (Gyada)", steps: "1. Prepare sandy soil\n2. Plant seeds\n3. Apply fertilizer\n4. Weed and monitor pests\n5. Harvest", days: "90 to 110 days" },
+  rogo: { name: "Cassava (Rogo)", steps: "1. Clear land\n2. Plant stem cuttings\n3. Weed and fertilize\n4. Pest control\n5. Harvest", days: "180 to 365 days" },
+  karas: { name: "Carrot (Karas)", steps: "1. Prepare fine soil\n2. Sow seeds thinly\n3. Water lightly\n4. Thin seedlings\n5. Harvest", days: "70 to 90 days" },
+  lemu: { name: "Lemon (Lemu)", steps: "1. Plant seedlings in rich soil\n2. Water regularly\n3. Prune for shape\n4. Fertilize\n5. Harvest", days: "180 to 300 days" }
+};
+
+    
+    function addMessage(text, isUser = false) {
+      const div = document.createElement('div');
+      div.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+      div.innerText = text;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = userInput.value.trim().toLowerCase();
+      if (!input) return;
+      addMessage(input, true);
+      userInput.value = '';
+    
+      if (pendingSuggestion && (input === 'yes' || input === 'eh' || input === 'ehh')) {
+        const crop = cropData[pendingSuggestion];
+        addMessage(`Here is the information for "${crop.name}":\n\n🌱 Steps:\n${crop.steps}\n\n⏱️ Days to harvest: ${crop.days}`);
+        pendingSuggestion = null;
+        return;
+      }
+    
+      if (cropData[input]) {
+        const crop = cropData[input];
+        addMessage(`✅ Crop: ${crop.name}\n🌱 Steps:\n${crop.steps}\n⏱️ Days to harvest: ${crop.days}`);
+        return;
+      }
+    
+      const guess = getClosestCrop(input);
+      if (guess) {
+        pendingSuggestion = guess;
+        addMessage(`🤔 Did you mean "${cropData[guess].name}"? Reply "yes" to continue.`);
+      } else {
+        addMessage("❌ Sorry, I couldn't find that crop. Please try again.");
+      }
+    });
+    
+    function getClosestCrop(input) {
+      const threshold = 3;
+      let bestMatch = null;
+      let minDist = Infinity;
+      for (const crop in cropData) {
+        const dist = levenshteinDistance(input, crop);
+        if (dist < minDist && dist <= threshold) {
+          minDist = dist;
+          bestMatch = crop;
+        }
+      }
+      return bestMatch;
+    }
+    
+    function levenshteinDistance(a, b) {
+      const m = a.length, n = b.length;
+      const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+      for (let i = 0; i <= m; i++) dp[i][0] = i;
+      for (let j = 0; j <= n; j++) dp[0][j] = j;
+      for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+          dp[i][j] = a[i - 1] === b[j - 1]
+            ? dp[i - 1][j - 1]
+            : 1 + Math.min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]);
+        }
+      }
+      return dp[m][n];
+    }
+    </script>
+    
+</body>
+</html>

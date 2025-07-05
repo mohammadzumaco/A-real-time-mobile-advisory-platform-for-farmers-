@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Dankalin Hausa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffef7;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #8b5d2e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #8b5d2e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #5a3b1e;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #8b5d2e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #8b5d2e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #5a3b1e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-title">🌾 Noman Dankalin Hausa</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+  <nav>
+    <a href="../second.html">Home</a>
+    <a href="../ABOUTME.HTML">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+  </nav>
+
+  <section id="step1">
+    <h2 id="title1">1. Zaɓin Ƙasa</h2>
+    <p id="content1">Dankalin Hausa na buƙatar ƙasa mai laushi wadda ke fitar da ruwa sosai. Ƙasa mai yashi da laka kaɗan ita ce mafi dacewa. A kwashe ciyawa da tarkace kafin shuka.</p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">A zaɓi iri daga tubers masu lafiya da manyan tudu. A sare sassan da suke da ido (eye) don dasawa. A guji amfani da tubers masu kumburi ko lalacewa.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Shuka</h2>
+    <p id="content3">A dasa kananan ɓangarorin iri cikin rami ko layi mai zurfin 5-10cm. A bar tazara na 30cm tsakanin tsiro da 75cm tsakanin layuka. Shuka a lokacin damina ko a ban ruwa.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Taki da Ciyawa</h2>
+    <p id="content4">A shuka da taki kamar na shanu ko na kaji. A cire ciyawa cikin lokaci domin kada su hana girma. A kara ƙasa kusa da tushen shuka bayan makonni 3-4.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Ban Ruwa</h2>
+    <p id="content5">Dankalin Hausa ba ya son ruwa mai yawa. Idan ba damina ba ne, a ban ruwa sau ɗaya ko sau biyu a mako bisa yanayin ƙasa. Kada a bar ƙasa ta bushe sosai.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Cututtuka da Kwari</h2>
+    <p id="content6">A guji shuka a inda aka taba samun cuta. A kula da kwari irin su cutworms da nematodes. A cire shuka da ta kamu da cuta da wuri.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Girbi</h2>
+    <p id="content7">A girbe bayan watanni 4 zuwa 5 daga shuka, lokacin da ganye ya bushe ko kuma tuber ya kai girma. A cire da kyau don kar su farfashe. A busar da su a rana kafin ajiya.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #704206;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    const steps = {
+      ha: {
+        titles: [
+          "1. Zaɓin Ƙasa",
+          "2. Zaɓin Iri",
+          "3. Shuka",
+          "4. Taki da Ciyawa",
+          "5. Ban Ruwa",
+          "6. Cututtuka da Kwari",
+          "7. Girbi"
+        ],
+        contents: [
+          "Dankalin Hausa na buƙatar ƙasa mai laushi wadda ke fitar da ruwa sosai. Ƙasa mai yashi da laka kaɗan ita ce mafi dacewa. A kwashe ciyawa da tarkace kafin shuka.",
+          "A zaɓi iri daga tubers masu lafiya da manyan tudu. A sare sassan da suke da ido (eye) don dasawa. A guji amfani da tubers masu kumburi ko lalacewa.",
+          "A dasa kananan ɓangarorin iri cikin rami ko layi mai zurfin 5-10cm. A bar tazara na 30cm tsakanin tsiro da 75cm tsakanin layuka. Shuka a lokacin damina ko a ban ruwa.",
+          "A shuka da taki kamar na shanu ko na kaji. A cire ciyawa cikin lokaci domin kada su hana girma. A kara ƙasa kusa da tushen shuka bayan makonni 3-4.",
+          "Dankalin Hausa ba ya son ruwa mai yawa. Idan ba damina ba ne, a ban ruwa sau ɗaya ko sau biyu a mako bisa yanayin ƙasa. Kada a bar ƙasa ta bushe sosai.",
+          "A guji shuka a inda aka taba samun cuta. A kula da kwari irin su cutworms da nematodes. A cire shuka da ta kamu da cuta da wuri.",
+          "A girbe bayan watanni 4 zuwa 5 daga shuka, lokacin da ganye ya bushe ko kuma tuber ya kai girma. A cire da kyau don kar su farfashe. A busar da su a rana kafin ajiya."
+        ],
+        mainTitle: "Jagorar Noman Dankalin Hausa"
+      },
+      en: {
+        titles: [
+          "1. Soil Selection",
+          "2. Seed Selection",
+          "3. Planting",
+          "4. Fertilizer & Weeding",
+          "5. Watering",
+          "6. Diseases and Pests",
+          "7. Harvesting"
+        ],
+        contents: [
+          "Sweet potatoes require soft, well-drained soil. Sandy-loam soil is ideal. Clear grasses and debris before planting.",
+          "Use healthy seed tubers with visible eyes. Cut into pieces and allow them to dry before planting. Avoid diseased or rotten tubers.",
+          "Plant the seed pieces 5-10cm deep with 30cm spacing between plants and 75cm between rows. Best during rainy season or irrigated.",
+          "Apply organic manure like cow dung or poultry droppings. Weed regularly and heap soil around stems after 3–4 weeks.",
+          "Sweet potatoes do not like too much water. Water once or twice a week if not rainy, depending on the soil.",
+          "Avoid planting in infected areas. Watch for pests like cutworms and nematodes. Remove infected plants quickly.",
+          "Harvest 4 to 5 months after planting when leaves start to dry or tubers mature. Lift carefully to avoid bruising. Sun-dry before storage."
+        ],
+        mainTitle: "Sweet Potato Farming Guide"
+      }
+    };
+
+    function showNext(currentId) {
+      const currentNum = parseInt(currentId.replace('step', ''));
+      const nextNum = currentNum + 1;
+      const currentSection = document.getElementById(currentId);
+      const nextSection = document.getElementById('step' + nextNum);
+      if (nextSection) {
+        currentSection.style.display = 'none';
+        nextSection.style.display = 'block';
+      }
+    }
+
+    function goBack() {
+      for (let i = 1; i <= 7; i++) {
+        const sec = document.getElementById('step' + i);
+        sec.style.display = (i === 1) ? 'block' : 'none';
+      }
+    }
+
+    function switchLang(lang) {
+      const titles = steps[lang].titles;
+      const contents = steps[lang].contents;
+      document.getElementById("main-title").innerText = steps[lang].mainTitle;
+      for (let i = 0; i < titles.length; i++) {
+        document.getElementById(`title${i + 1}`).innerText = titles[i];
+        document.getElementById(`content${i + 1}`).innerText = contents[i];
+      }
+    }
+  </script>
+
+</body>
+</html>

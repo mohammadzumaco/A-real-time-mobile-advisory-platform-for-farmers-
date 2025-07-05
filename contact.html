@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Mohammad Abubakar Ahmad</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f7;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #34495e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 600;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .contact-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .contact-info {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .contact-info strong {
+      color: #2980b9;
+    }
+
+    .email-link {
+      display: inline-block;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .email-link:hover {
+      background-color: #1c5980;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: aqua;
+      color: #1c5980;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #00d1d1;
+    }
+
+    footer {
+      background-color: #34495e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .contact-card {
+        padding: 30px 20px;
+      }
+
+      .contact-info {
+        font-size: 16px;
+      }
+
+      .email-link, .back-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Contact Us
+</header>
+
+<main>
+  <div class="contact-card">
+    <h2>Get in Touch</h2>
+    <p class="contact-info">
+      For inquiries, feedback or collaboration, feel free to contact me at:
+    </p>
+    <p class="contact-info">
+      <strong>Email:</strong> <br>
+      <a href="mailto:mohammadzumaco123@gmail.com" class="email-link">mohammadzumaco123@gmail.com</a>
+    </p>
+    <a href="second.html" class="back-btn">Back To Home</a>
+  </div>
+</main>
+
+<footer>
+  &copy; MZUMACO 2025. All rights reserved.
+</footer>
+
+</body>
+</html>

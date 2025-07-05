@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Tattasai Ta Ban Ruwa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌾 Jagorar Noman Tattasai Ta Ban Ruwa</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html">Home</a>
+    <a href="../ABOUTME.HTML">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+  </nav>
+
+  <section id="step1">
+    <h2 id="title1">1. Shirye-shiryen Gona</h2>
+    <p id="content1">Zaɓi ƙasa mai kyau wadda take da kyau da kuma kyauwar ban ruwa. Tsabtace filin daga ciyawa da duwatsu kafin shuka tattasai. A zagaye filin da ƙasa ko itatuwa don kiyaye shuka daga kwari da dabbobi.</p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">Zaɓi iri na tattasai masu kyau da suka dace da ban ruwa, irin waɗanda ke da juriya ga cututtuka da ƙura. Iri mai inganci yana taimaka wajen samun amfanin gona mai kyau.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Shuka Tattasai</h2>
+    <p id="content3">A shuka iri a ramuka a nisan kusan 40cm tsakanin ramuka da 60cm tsakanin layuka. Ban ruwa a hankali bayan shuka. Ban ruwa na farko ya kamata a yi nan da kwanaki 3-4 bayan shuka don tabbatar da ƙasar ta yi danshi.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Yin Amfani da Taki</h2>
+    <p id="content4">Yi amfani da taki mai ɗauke da nitrogen (N), phosphorus (P), da potassium (K) kamar NPK 15-15-15 kafin shuka da kuma lokacin girma (kimanin makonni 3 da 6 bayan shuka) don ƙara yawan tattasai da ƙarfafa tsiro.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Kulawa da Ciyawa</h2>
+    <p id="content5">A cire ciyawa da ke hana tattasai samun isasshen hasken rana ta hanyar noman hannu ko amfani da magungunan kashe ciyawa masu dacewa. Yi hakan akai-akai don hana ciyawar shuka.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Kula da Kwari da Cututtuka</h2>
+    <p id="content6">A lura da kwari kamar su ƙwari, da cututtuka kamar su ƙura da ƙwayoyin cuta. Idan aka ga tsire-tsire na nuna launin ja ko wilting, cire su nan take don hana yaduwa. Yi amfani da magungunan kashe kwari da cututtuka masu dacewa kamar pyrethroids da fungicides lokacin da ya zama dole.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Ban Ruwa Mai Inganci</h2>
+    <p id="content7">A yi ban ruwa akai-akai, musamman a lokacin zafi. A fara ban ruwa bayan kwanaki 3-4 daga shuka. Ban ruwa ya zama mai kyau, kada ya yi yawa har ya saƙa ƙasa. Ana iya yin ban ruwa kowane kwana 2-3 bisa yanayin zafi da ƙasa. Yin amfani da tsarin ban ruwa na ban ruwa ko famfo na drip irrigation zai fi kyau.</p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8">8. Girbi da Ajiya</h2>
+    <p id="content8">Tattasai yana girma cikin kwanaki 60-90. A girbe lokacin da tattasai suka yi launin ja ko kore mai kyau. A ajiye a wuri mai sanyi da bushewa don kiyaye danyen tattasai daga lalacewa.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+
+  <script>
+    const hausaSteps = [
+      "Shirye-shiryen Gona",
+      "Zaɓin Iri",
+      "Shuka Tattasai",
+      "Yin Amfani da Taki",
+      "Kulawa da Ciyawa",
+      "Kula da Kwari da Cututtuka",
+      "Ban Ruwa Mai Inganci",
+      "Girbi da Ajiya"
+    ];
+
+    const hausaContents = [
+      "Zaɓi ƙasa mai kyau wadda take da kyau da kuma kyauwar ban ruwa. Tsabtace filin daga ciyawa da duwatsu kafin shuka tattasai. A zagaye filin da ƙasa ko itatuwa don kiyaye shuka daga kwari da dabbobi.",
+      "Zaɓi iri na tattasai masu kyau da suka dace da ban ruwa, irin waɗanda ke da juriya ga cututtuka da ƙura. Iri mai inganci yana taimaka wajen samun amfanin gona mai kyau.",
+      "A shuka iri a ramuka a nisan kusan 40cm tsakanin ramuka da 60cm tsakanin layuka. Ban ruwa a hankali bayan shuka. Ban ruwa na farko ya kamata a yi nan da kwanaki 3-4 bayan shuka don tabbatar da ƙasar ta yi danshi.",
+      "Yi amfani da taki mai ɗauke da nitrogen (N), phosphorus (P), da potassium (K) kamar NPK 15-15-15 kafin shuka da kuma lokacin girma (kimanin makonni 3 da 6 bayan shuka) don ƙara yawan tattasai da ƙarfafa tsiro.",
+      "A cire ciyawa da ke hana tattasai samun isasshen hasken rana ta hanyar noman hannu ko amfani da magungunan kashe ciyawa masu dacewa. Yi hakan akai-akai don hana ciyawar shuka.",
+      "A lura da kwari kamar su ƙwari, da cututtuka kamar su ƙura da ƙwayoyin cuta. Idan aka ga tsire-tsire na nuna launin ja ko wilting, cire su nan take don hana yaduwa. Yi amfani da magungunan kashe kwari da cututtuka masu dacewa kamar pyrethroids da fungicides lokacin da ya zama dole.",
+      "A yi ban ruwa akai-akai, musamman a lokacin zafi. A fara ban ruwa bayan kwanaki 3-4 daga shuka. Ban ruwa ya zama mai kyau, kada ya yi yawa har ya saƙa ƙasa. Ana iya yin ban ruwa kowane kwana 2-3 bisa yanayin zafi da ƙasa. Yin amfani da tsarin ban ruwa na ban ruwa ko famfo na drip irrigation zai fi kyau.",
+      "Tattasai yana girma cikin kwanaki 60-90. A girbe lokacin da tattasai suka yi launin ja ko kore mai kyau. A ajiye a wuri mai sanyi da bushewa don kiyaye danyen tattasai daga lalacewa."
+    ];
+
+    const englishSteps = [
+      "Land Preparation",
+      "Seed Selection",
+      "Planting",
+      "Fertilizer Application",
+      "Weed Control",
+      "Pest and Disease Management",
+      "Effective Watering",
+      "Harvesting and Storage"
+    ];
+
+    const englishContents = [
+      "Choose good soil that drains well and is fertile. Clear the field of weeds and stones before planting the tomatoes. Surround the field with fences or hedges to protect the plants from pests and animals.",
+      "Select good quality tomato seeds that suit the local conditions and are resistant to diseases and pests. Quality seeds help ensure a good harvest.",
+      "Plant the seeds in holes spaced about 40cm apart and 60cm between rows. Water gently after planting. The first watering should be done within 3-4 days to keep the soil moist.",
+      "Use fertilizers containing nitrogen (N), phosphorus (P), and potassium (K) such as NPK 15-15-15 before planting and during growth (around 3 and 6 weeks after planting) to increase yield and strengthen plants.",
+      "Remove weeds that block sunlight from reaching the tomato plants by manual weeding or appropriate herbicides. Do this regularly to keep weeds under control.",
+      "Monitor for pests like insects and diseases such as blight and fungal infections. Remove affected plants immediately to prevent spread. Use appropriate pesticides like pyrethroids and fungicides when necessary.",
+      "Water regularly, especially during hot weather. Begin watering 3-4 days after planting. Water sufficiently but avoid waterlogging the soil. Water every 2-3 days depending on temperature and soil. Drip irrigation or sprinkler systems work best.",
+      "Tomatoes mature in about 60-90 days. Harvest when fruits show good red or green color. Store in a cool dry place to prevent spoilage."
+    ];
+
+    let currentStep = 1;
+    let currentLang = "ha";
+
+    function showNext(currentId) {
+      if (currentStep >= 8) return; // Already at last step
+
+      // Hide current
+      document.getElementById(currentId).style.display = "none";
+      currentStep++;
+
+      // Show next
+      const nextId = "step" + currentStep;
+      document.getElementById(nextId).style.display = "block";
+
+      updateText(currentStep, currentLang);
+    }
+
+    function goBack() {
+      // Hide all steps
+      for(let i=1; i<=8; i++){
+        document.getElementById("step" + i).style.display = "none";
+      }
+      currentStep = 1;
+      document.getElementById("step1").style.display = "block";
+      updateText(currentStep, currentLang);
+    }
+
+    function updateText(step, lang) {
+      if (lang === "ha") {
+        document.getElementById("title" + step).textContent = (step) + ". " + hausaSteps[step-1];
+        document.getElementById("content" + step).textContent = hausaContents[step-1];
+        // Update button text
+        if(step === 8){
+          // Last step button text
+          document.querySelector("#step8 button").textContent = "Komawa Farko";
+        } else {
+          document.querySelector("#step" + step + " button").textContent = "Gaba";
+        }
+      } else {
+        document.getElementById("title" + step).textContent = (step) + ". " + englishSteps[step-1];
+        document.getElementById("content" + step).textContent = englishContents[step-1];
+        if(step === 8){
+          document.querySelector("#step8 button").textContent = "Go Back to Start";
+        } else {
+          document.querySelector("#step" + step + " button").textContent = "Next";
+        }
+      }
+    }
+
+    function switchLang(lang) {
+      currentLang = lang;
+      // Update all visible steps text in the current language
+      for(let i=1; i<=8; i++){
+        if(document.getElementById("step" + i).style.display === "block"){
+          updateText(i, lang);
+        }
+      }
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #024522;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

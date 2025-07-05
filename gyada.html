@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Gyada (Groundnut)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌾 Noman Gyada (Groundnut)</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <button style="background-color: #255426;"><a href="../raining.html">Back to HOME</a></button>
+  </nav>
+
+  <section id="step1">
+    <h2 id="title1">1. Shirye-shiryen Gona</h2>
+    <p id="content1">Zaɓi ƙasa mai kyau, wacce ba ta da ruwa mai yawa kuma tana da kyau sosai. A tsabtace gona kafin a shuka gyada.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">Zaɓi irin gyada masu kyau, masu juriya ga cututtuka da kwari domin samun amfanin gona mai yawa.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Shuka Gyada</h2>
+    <p id="content3">A shuka iri a zurfin ƙasa na kusan 5cm, da nisan kusan 30cm tsakanin tsire-tsire da 60cm tsakanin layi.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Feturiliza</h2>
+    <p id="content4">A yi amfani da taki mai nitrogen da phosphorus kafin dasa, sannan a ƙara taki lokacin girma don ƙara yawan amfanin gona.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Kulawa da Ciyawa</h2>
+    <p id="content5">A yi noman hannu ko amfani da magunguna don kawar da ciyawa domin kada su hana girma.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Kula da Kwari da Cututtuka</h2>
+    <p id="content6">A lura da kwari kamar su cututtukan gyada da kwari. A yi amfani da magunguna idan ya zama dole.</p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Girbi Gyada</h2>
+    <p id="content7">Gyada tana girma cikin kwanaki 90-120. A girbe lokacin da ganyen ya fara bushewa kuma ƙwayayen sun yi cikakken girma.</p>
+    <button class="step-btn" onclick="showNext('step8')">Gaba</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8">8. Ajiya da Amfani</h2>
+    <p id="content8">A ajiye gyada a wuri mai bushe da iska mai kyau. Ana amfani da gyada a girke-girke da samar da man gyada.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #010101;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    const hausaSteps = [
+      "Shirye-shiryen Gona",
+      "Zaɓin Iri",
+      "Shuka Gyada",
+      "Feturiliza",
+      "Kulawa da Ciyawa",
+      "Kula da Kwari da Cututtuka",
+      "Girbi Gyada",
+      "Ajiya da Amfani"
+    ];
+
+    const hausaContents = [
+      "Zaɓi ƙasa mai kyau, wacce ba ta da ruwa mai yawa kuma tana da kyau sosai. A tsabtace gona kafin a shuka gyada.",
+      "Zaɓi irin gyada masu kyau, masu juriya ga cututtuka da kwari domin samun amfanin gona mai yawa.",
+      "A shuka iri a zurfin ƙasa na kusan 5cm, da nisan kusan 30cm tsakanin tsire-tsire da 60cm tsakanin layi.",
+      "A yi amfani da taki mai nitrogen da phosphorus kafin dasa, sannan a ƙara taki lokacin girma don ƙara yawan amfanin gona.",
+      "A yi noman hannu ko amfani da magunguna don kawar da ciyawa domin kada su hana girma.",
+      "A lura da kwari kamar su cututtukan gyada da kwari. A yi amfani da magunguna idan ya zama dole.",
+      "Gyada tana girma cikin kwanaki 90-120. A girbe lokacin da ganyen ya fara bushewa kuma ƙwayayen sun yi cikakken girma.",
+      "A ajiye gyada a wuri mai bushe da iska mai kyau. Ana amfani da gyada a girke-girke da samar da man gyada."
+    ];
+
+    const englishSteps = [
+      "Land Preparation",
+      "Seed Selection",
+      "Groundnut Planting",
+      "Fertilization",
+      "Weed Control",
+      "Pest and Disease Management",
+      "Groundnut Harvesting",
+      "Storage and Usage"
+    ];
+
+    const englishContents = [
+      "Choose good land that is well-drained and fertile. Clear the field before planting groundnuts.",
+      "Select good quality, disease and pest resistant groundnut seeds for higher yield.",
+      "Plant seeds about 5cm deep with spacing approximately 30cm between plants and 60cm between rows.",
+      "Use fertilizers containing nitrogen and phosphorus before planting, and add more during growth to increase yield.",
+      "Control weeds manually or with herbicides to prevent competition.",
+      "Monitor for pests and diseases affecting groundnuts; apply pesticides when necessary.",
+      "Groundnuts mature in 90-120 days. Harvest when leaves start to dry and pods are fully developed.",
+      "Store groundnuts in a dry, well-ventilated place. Groundnuts are used in cooking and to produce groundnut oil."
+    ];
+
+    function showNext(id) {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById("step1").style.display = "block";
+    }
+
+    function switchLang(lang) {
+      const titles = document.querySelectorAll("h2[id^='title']");
+      const contents = document.querySelectorAll("p[id^='content']");
+      for (let i = 0; i < titles.length; i++) {
+        titles[i].innerText = lang === 'ha' ? (i + 1) + ". " + hausaSteps[i] : (i + 1) + ". " + englishSteps[i];
+        contents[i].innerText = lang === 'ha' ? hausaContents[i] : englishContents[i];
+      }
+    }
+  </script>
+
+</body>
+</html>

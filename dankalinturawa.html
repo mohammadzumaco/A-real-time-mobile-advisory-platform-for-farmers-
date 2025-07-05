@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Dankalin Turawa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-title">🌾 Noman Dankalin Turawa</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html">Home</a>
+    <a href="../ABOUTME.HTML">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+  </nav>
+
+
+  <section id="step1">
+    <h2 id="title1">1. Zaɓin Ƙasa</h2>
+    <p id="content1">Dankalin Turawa yana bukatar ƙasa mai laushi, mai ɗan laka, kuma mai fitar ruwa da kyau. Kada a shuka a ƙasa mai ruwa ko mai taruwar ruwa. A gyara ƙasa da takin gargajiya ko wanda ya lalace sosai.</p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">Zaɓi iri masu kyau da aka yarda da su kamar su Kufri, Diamant, da Rosetta. Iri masu kyau sukan bayar da amfanin gona mai yawa da juriya ga cututtuka.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Shuka</h2>
+    <p id="content3">A yanka dankalin iri zuwa sassa masu idanu biyu ko fiye. A bar su su bushe na kwana 2-3 kafin shuka. Shuka cikin rami mai zurfin 5-10cm, a tazara na 25-30cm tsakanin tsiro da 60-75cm tsakanin layuka.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Yin Amfani da Taki</h2>
+    <p id="content4">Yi amfani da takin NPK 15-15-15 ko 20-10-10 a lokacin dasa da kuma bayan tsiro. Takin gargajiya kamar ruwan shanu ko taki mai ruwa shima yana da amfani sosai wajen bunƙasa tsiro.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Juyawa da Gyarawa</h2>
+    <p id="content5">A lokacin da dankali ya fara fitowa, a rika juyawa da tura ƙasa kusa da gindin tsiro (earthing up) domin taimaka musu girma da hana hasken rana lalata tubers. Wannan aiki yana kara yawan amfanin gona.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Ban Ruwa</h2>
+    <p id="content6">Dankalin Turawa yana buƙatar ruwa mai kyau amma ba mai yawa ba. A ban ruwa sau biyu a mako musamman a lokacin fari. Kada a bar ƙasa ta bushe sosai ko ta jiƙe fiye da kima.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Kula da Kwari da Cututtuka</h2>
+    <p id="content7">A kula da kwari kamar nematodes da kwari masu cin ganye. Yi amfani da magungunan da suka dace. Idan an lura da cututtuka kamar Black scurf ko Late blight, a cire tsiro da ya kamu kuma a fesa magani da wuri.</p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8">8. Girbi da Ajiya</h2>
+    <p id="content8">Dankalin Turawa yana girma bayan kwanaki 90-120. A girbe sa’ad da ganyen ya fara bushewa. Kada a barshi cikin ƙasa da yawa. A barshi ya bushe a rana na kwana 1-2 sannan a adana shi a wuri mai sanyi, bushe da iska.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #0e8045;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    function showNext(currentId) {
+      const currentNum = parseInt(currentId.replace('step', ''));
+      const nextNum = currentNum + 1;
+      const currentSection = document.getElementById(currentId);
+      const nextSection = document.getElementById('step' + nextNum);
+      if (nextSection) {
+        currentSection.style.display = 'none';
+        nextSection.style.display = 'block';
+      }
+    }
+
+    function goBack() {
+      for (let i = 1; i <= 8; i++) {
+        const sec = document.getElementById('step' + i);
+        sec.style.display = (i === 1) ? 'block' : 'none';
+      }
+    }
+
+    function switchLang(lang) {
+      alert('An danna maɓallin ' + lang + ', amma fassarar ba ta haɗe ba a wannan misali.');
+    }
+  </script>
+
+</body>
+</html>

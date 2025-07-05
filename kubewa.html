@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Kabeji Ta Ban Ruwa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-title">🌾 Noman Kabeji Ta Ban Ruwa</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html">Home</a>
+    <a href="../ABOUTME.HTML">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+  </nav>
+
+  <section id="step1">
+    <h2 id="title1">1. Shirye-shiryen Gona</h2>
+    <p id="content1">Zaɓi ƙasa mai kyau, mai laushi kuma mai kyauwar ban ruwa. Tsabtace filin daga ciyawa, duwatsu, da tarkace kafin shuka kabeji. A zagaye filin da itatuwa ko shinge don kiyaye shuka daga kwari da dabbobi.</p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">Zaɓi iri na kabeji waɗanda suka dace da ban ruwa, musamman iri masu juriya ga cututtuka da ƙura. Iri mai kyau yana taimaka wa amfanin gona ya yi yawa kuma ya fi kyau.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Shuka Kabeji</h2>
+    <p id="content3">A shuka kabeji a layuka, a bar nisan kusan 30cm tsakanin tsire-tsire da 45-60cm tsakanin layuka. Ban ruwa a hankali bayan shuka don ƙasa ta yi danshi sosai. Ban ruwa na farko ya kamata a yi nan da kwanaki 3-5 bayan shuka.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Yin Amfani da Taki</h2>
+    <p id="content4">Yi amfani da taki mai ɗauke da nitrogen (N), phosphorus (P), da potassium (K) kamar NPK 20-10-10 kafin shuka da kuma lokacin girma (kimanin makonni 4 da 8 bayan shuka) don ƙara yawan kabeji da ƙarfafa tsiro.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Kulawa da Ciyawa</h2>
+    <p id="content5">A cire ciyawa da ke hana kabeji samun hasken rana ta hanyar noman hannu ko amfani da magungunan kashe ciyawa masu dacewa. Yi wannan aiki akai-akai don hana ciyawar shuka da haifar da matsaloli.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Kula da Kwari da Cututtuka</h2>
+    <p id="content6">A lura da kwari kamar su ƙwari, da cututtuka kamar ƙura da ƙwayoyin cuta. Idan aka ga tsire-tsire na nuna alamun cuta, cire su nan take don hana yaduwa. Yi amfani da magungunan kashe kwari da cututtuka masu dacewa a lokacin da ya dace.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Ban Ruwa Mai Inganci</h2>
+    <p id="content7">A yi ban ruwa akai-akai musamman a lokacin zafi da bushewa. Fara ban ruwa bayan kwanaki 3-5 daga shuka. Kada a yi ban ruwa mai yawa don kada ƙasa ta yi ruwa sosai. Yin amfani da tsarin drip irrigation zai taimaka wajen adana ruwa da inganta shuka.</p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8">8. Girbi da Ajiya</h2>
+    <p id="content8">Kabeji yana girma cikin kwanaki 70-90. A girbe lokacin da kan kabejin ya yi kauri kuma ya kasance mai kyau. A ajiye a wuri mai sanyi da bushewa don kiyaye kabeji daga lalacewa.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+
+  <script>
+    // Function to show next step and hide current
+    function showNext(currentId) {
+      const currentNum = parseInt(currentId.replace('step', ''));
+      const nextNum = currentNum + 1;
+      const currentSection = document.getElementById(currentId);
+      const nextSection = document.getElementById('step' + nextNum);
+      if (nextSection) {
+        currentSection.style.display = 'none';
+        nextSection.style.display = 'block';
+      }
+    }
+
+    // Function to go back to the first step
+    function goBack() {
+      for (let i = 1; i <= 8; i++) {
+        const sec = document.getElementById('step' + i);
+        sec.style.display = (i === 1) ? 'block' : 'none';
+      }
+    }
+
+    // Language switching placeholder (optional, you can implement if needed)
+    function switchLang(lang) {
+      alert('An danna maɓallin ' + lang + ', amma fassarar ba ta haɗe ba a wannan misali.');
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #035732;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

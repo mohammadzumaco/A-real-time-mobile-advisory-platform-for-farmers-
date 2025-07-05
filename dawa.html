@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guinea Corn (Dawa) Farming Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    header button {
+      background-color: #ffffff;
+      color: #2f612e;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    header button:hover {
+      background-color: #e6ffe6;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2f612e;
+      margin-top: 20px;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    button {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #255426;
+    }
+
+    #language-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #language-buttons button {
+      display: inline-block;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with navigation buttons -->
+  <header>
+    <button style="background-color: #339835;color: W;"><a href="../raining.html">Back to irrigation</a></button>
+ 
+  </header>
+
+  <h1>🌾Guinea Corn (Dawa) Farming Guide</h1>
+
+  <div id="language-buttons">
+    <strong>Select Language / Zaɓi Harshe:</strong><br>
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('ha')">Hausa</button>
+  </div>
+
+  <!-- Sections -->
+  <section id="step1">
+    <h2 id="title1"></h2>
+    <p id="content1"></p>
+    <button onclick="showNext('step2')" id="btn1">Next</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2"></h2>
+    <p id="content2"></p>
+    <button onclick="showNext('step3')" id="btn2">Next</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3"></h2>
+    <p id="content3"></p>
+    <button onclick="showNext('step4')" id="btn3">Next</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4"></h2>
+    <p id="content4"></p>
+    <button onclick="showNext('step5')" id="btn4">Next</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5"></h2>
+    <p id="content5"></p>
+    <button onclick="showNext('step6')" id="btn5">Next</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6"></h2>
+    <p id="content6"></p>
+    <button onclick="showNext('step7')" id="btn6">Next</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7"></h2>
+    <p id="content7"></p>
+    <button onclick="showNext('step8')" id="btn7">Next</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8"></h2>
+    <p id="content8"></p>
+    <button onclick="goBack()" id="btn8">Go Back</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #010101;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    const data = {
+      en: [
+        ["1. Land Preparation", "Choose well-drained loamy soil. Clear the land, plough, and harrow to prepare a fine seedbed.", "Next"],
+        ["2. Seed Selection", "Use high-yielding, disease-resistant varieties like SAMSORG 17, SAMSORG 40, etc.", "Next"],
+        ["3. Planting", "Plant at the beginning of the rainy season. Spacing: 60-75cm between rows, 20-25cm between plants. Sow 2-3 seeds per hole.", "Next"],
+        ["4. Fertilizer Application", "Apply NPK 15:15:15 at 2 weeks and top-dress with Urea at 5-6 weeks after planting.", "Next"],
+        ["5. Weed Control", "Weed 2-3 times or use herbicides. Keep the field clean to reduce pest infestation.", "Next"],
+        ["6. Pest and Disease Control", "Monitor regularly. Use appropriate insecticides and fungicides when necessary.", "Next"],
+        ["7. Harvesting", "Harvest when the grains are dry and hard, usually 100-120 days after planting.", "Next"],
+        ["8. Storage and Uses", "Dry properly and store in bags or silos. Used for pap, tuwo, animal feed, and local drinks.", "Go Back"]
+      ],
+      ha: [
+        ["1. Shirye-shiryen Gona", "Zaɓi ƙasa mai kyau wadda ba ta cika ruwa ba. Tsaftace, guga, da harba ƙasa domin samun yanayi mai kyau na dasa iri.", "Gaba"],
+        ["2. Zaɓin Iri", "Yi amfani da irin dawa masu yawan amfanin gona da juriya ga cututtuka kamar SAMSORG 17, SAMSORG 40, da sauransu.", "Gaba"],
+        ["3. Dasa", "A dasa dawa a farkon damina. Tazara: 60-75cm tsakanin layi, 20-25cm tsakanin tsiro. A saka iri 2-3 a kowanne rami.", "Gaba"],
+        ["4. Feturiliza", "A zuba NPK (15:15:15) bayan makonni 2 da dasa, sannan a ƙara Urea bayan makonni 5-6.", "Gaba"],
+        ["5. Yaki da Ciyawa", "A yi noma da hannu ko amfani da magani. A kula da tsaftar gona don hana kwari.", "Gaba"],
+        ["6. Yaki da Kwari da Cututtuka", "A rika duba tsirrai. A yi amfani da magungunan kwari da fungi idan an buƙata.", "Gaba"],
+        ["7. Girbi", "A girbe idan hatsi ya bushe sosai (kwana 100-120 bayan dasa).", "Gaba"],
+        ["8. Ajiya da Amfani", "A busar da kyau sannan a ajiye a buhuna ko silos. Ana amfani da shi wajen tuwo, koko, abincin dabbobi, da giya ta gargajiya.", "Komawa"]
+      ]
+    };
+
+    let currentLang = 'en';
+
+    function updateText() {
+      for (let i = 1; i <= 8; i++) {
+        document.getElementById(`title${i}`).innerText = data[currentLang][i-1][0];
+        document.getElementById(`content${i}`).innerText = data[currentLang][i-1][1];
+        document.getElementById(`btn${i}`).innerText = data[currentLang][i-1][2];
+      }
+    }
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      updateText();
+      goBack(); // Start from beginning
+    }
+
+    function showNext(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById("step1").style.display = "block";
+    }
+
+    updateText(); // Load default language
+  </script>
+</body>
+</html>

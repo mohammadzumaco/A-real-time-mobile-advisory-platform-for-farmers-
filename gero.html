@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gero Farming in Nigeria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf7ef;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #8a5a1f;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #8a5a1f;
+      font-weight: bold;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #8a5a1f;
+    }
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+    button {
+      display: block;
+      background-color: #8a5a1f;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #6b4418;
+    }
+    #language-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #language-buttons button {
+      display: inline-block;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: white;">🌾Noman Gero <br>{millet Farming} </h1>
+  </header>
+
+  <nav>
+    <button style="background-color: #000000;color: white;"><a href="../raining.html">Back to HOME</a></button>
+  </nav>
+
+  <div id="language-buttons">
+    <strong>Select Language / Zaɓi Harshe:</strong><br>
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('ha')">Hausa</button>
+  </div>
+
+  <!-- Section Template -->
+  <section id="step1">
+    <h2 id="title1"></h2>
+    <p id="content1"></p>
+    <button onclick="showNext('step2')" id="btn1">Next</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2"></h2>
+    <p id="content2"></p>
+    <button onclick="showNext('step3')" id="btn2">Next</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3"></h2>
+    <p id="content3"></p>
+    <button onclick="showNext('step4')" id="btn3">Next</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4"></h2>
+    <p id="content4"></p>
+    <button onclick="showNext('step5')" id="btn4">Next</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5"></h2>
+    <p id="content5"></p>
+    <button onclick="showNext('step6')" id="btn5">Next</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6"></h2>
+    <p id="content6"></p>
+    <button onclick="showNext('step7')" id="btn6">Next</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7"></h2>
+    <p id="content7"></p>
+    <button onclick="showNext('step8')" id="btn7">Next</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8"></h2>
+    <p id="content8"></p>
+    <button onclick="goBack()" id="btn8">Go Back</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #010101;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    const data = {
+      en: [
+        ["1. Land Preparation", "Choose a sunny location with well-drained soil. Clear weeds and plough the land to fine tilth.", "Next"],
+        ["2. Seed Selection", "Use quality millet seeds such as SOSAT-C88 or LCICMV-4. These are high-yielding and drought-tolerant.", "Next"],
+        ["3. Planting", "Plant at the start of the rainy season. Spacing: 75 cm between rows and 20 cm between plants.", "Next"],
+        ["4. Fertilizer Application", "Apply NPK (15:15:15) two weeks after germination, and again after 4-5 weeks as top dressing.", "Next"],
+        ["5. Weed Management", "Weed manually or with herbicide. Weed 2-3 times to keep the farm clean and prevent pest attack.", "Next"],
+        ["6. Pest and Disease Control", "Monitor regularly. Use insecticides if pests appear. Prevent fungal diseases with good spacing.", "Next"],
+        ["7. Harvesting", "Harvest when heads turn brown and hard. Cut with knife or sickle. Dry properly before storage.", "Next"],
+        ["8. Storage", "Store in dry, cool, and rodent-free place. Use bags or silos. Treat with insecticide if needed.", "Go Back"]
+      ],
+      ha: [
+        ["1. Shirin Gona", "Zaɓi wurin da rana ke haskakawa kuma ƙasa tana zubar da ruwa. Tsaftace ciyawa da nika ƙasa da kyau.", "Gaba"],
+        ["2. Zaɓin Iri", "Yi amfani da irin gero mai inganci kamar SOSAT-C88 ko LCICMV-4. Wadannan suna da yawan amfanin gona da juriya ga fari.", "Gaba"],
+        ["3. Dasa", "A fara dasa a farkon damina. Tazara: 75 cm tsakanin layuka da 20 cm tsakanin tsire-tsire.", "Gaba"],
+        ["4. Feturiliza", "A zuba NPK (15:15:15) makonni biyu bayan shuka, sannan a ƙara bayan makonni 4-5.", "Gaba"],
+        ["5. Yaki da Ciyawa", "A yi noman hannu ko amfani da magani. Yi hakan sau 2-3 don tsaftace gona kuma hana kwari.", "Gaba"],
+        ["6. Yaki da Kwari da Cututtuka", "A kula da gona akai-akai. A fesa magani idan kwari sun bayyana. Kyakkyawan tazara yana hana cuta.", "Gaba"],
+        ["7. Girbi", "A girbe idan kan gero ya yi launin ruwan kasa kuma ya yi tauri. A sare da wuƙa ko lauje. A busar kafin a ajiye.", "Gaba"],
+        ["8. Ajiya", "A ajiye a wurin bushe, sanyi, kuma mara beraye. Yi amfani da buhuna ko silos. A fesa magani idan ya cancanta.", "Komawa"]
+      ]
+    };
+
+    let currentLang = 'en';
+
+    function updateText() {
+      for (let i = 1; i <= 8; i++) {
+        document.getElementById(`title${i}`).innerText = data[currentLang][i-1][0];
+        document.getElementById(`content${i}`).innerText = data[currentLang][i-1][1];
+        document.getElementById(`btn${i}`).innerText = data[currentLang][i-1][2];
+      }
+    }
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      updateText();
+      goBack();
+    }
+
+    function showNext(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById("step1").style.display = "block";
+    }
+
+    updateText();
+  </script>
+</body>
+</html>

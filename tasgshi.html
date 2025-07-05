@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Tattasai (Tashshi)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfcf3;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #8b2e1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #8b2e1a;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #6c2113;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #8b2e1a;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #8b2e1a;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #6c2113;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌾 Noman Tattasai (Tashshi)</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html">Home</a>
+    <a href="../ABOUTME.HTML">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+  </nav>
+
+
+  <section id="step1">
+    <h2>1. Zaɓin Filin da Tsabtacewa</h2>
+    <p>Zaɓi ƙasa mai yashi mai ɗan danɗano, wadda ke da kyau wajen rike danshi. A tsaftace gonar daga ciyawa da tarkace kafin shuka. Za a iya sa shinge ko itatuwa don hana kwari da dabbobi shiga.</p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2>2. Zaɓin Iri</h2>
+    <p>Zaɓi irin tattasai da suka dace da yanayin ƙasarku. Iri kamar ‘tatase’ ko ‘sudan red’ suna da juriya da kuma amfanin gona mai yawa. Zaɓi iri da ke ba da launin ja mai kyau da ɗanɗano mai ƙarfi.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2>3. Shuka Tattasai</h2>
+    <p>A soma dasa irinsu a cikin seedbed na tsawon makonni 4-6. Daga nan sai a canja su zuwa filin shuka. A bar nisan 30cm tsakanin tsire-tsire da 50cm tsakanin layuka. Ban ruwa akai-akai domin kar tattasai su bushe.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2>4. Taki da Ciyarwa</h2>
+    <p>A yi amfani da taki na gargajiya (kamar ƙazanta da ke huda) ko kuma NPK 15-15-15 kafin dasa tsiro da kuma lokacin girma. Taki yana taimakawa wajen karuwar tsiro da lafiyar shuka.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2>5. Ban Ruwa da Ciyawa</h2>
+    <p>A kula da ban ruwa musamman a lokacin fari ko lokacin girma. Kada ƙasa ta bushe kwata-kwata. A cire ciyawa a kusa da tsiro don kada su hana samun sinadarai da hasken rana.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2>6. Magance Kwari da Cututtuka</h2>
+    <p>A lura da kwari kamar kwari masu cizo da kurajen tsiro. Idan aka ga cuta, a fesa magani kamar Lambda-cyhalothrin ko Neem. Kada a yi amfani da magani mara lasisi.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2>7. Girbi da Ajiya</h2>
+    <p>Tattasai ba a girbe su gaba ɗaya ba. A girbe su a hankali yayin da suka fara yin ja. Wasu za su yi ja kafin wasu. A dinga cire masu ja sannan a bar sauran su ƙara girma. A ajiye a wuri mai inuwa, bushewa da sanyi kadan.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+
+  <script>
+    function showNext(currentId) {
+      const currentNum = parseInt(currentId.replace('step', ''));
+      const nextNum = currentNum + 1;
+      const currentSection = document.getElementById(currentId);
+      const nextSection = document.getElementById('step' + nextNum);
+      if (nextSection) {
+        currentSection.style.display = 'none';
+        nextSection.style.display = 'block';
+      }
+    }
+
+    function goBack() {
+      for (let i = 1; i <= 7; i++) {
+        const sec = document.getElementById('step' + i);
+        sec.style.display = (i === 1) ? 'block' : 'none';
+      }
+    }
+
+    function switchLang(lang) {
+      alert('An zaɓi yare: ' + lang + ' - Aiki ba a kunna fassarar ba tukuna.');
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #6e2409;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

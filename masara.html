@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maize Farming in Nigeria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f9f1;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #1e5631;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    button {
+      display: block;
+      background-color: #1e5631;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #145a2a;
+    }
+
+    #language-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #language-buttons button {
+      display: inline-block;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌾 Noman Masara (Maize)</h1>
+
+  <div id="language-buttons">
+    <strong>Select Language / Zaɓi Harshe:</strong><br>
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('ha')">Hausa</button>
+    <button><a href="../raining.html">Back to Irrigation</a></button>
+  </div>
+
+  <!-- Section Template -->
+  <section id="step1">
+    <h2 id="title1"></h2>
+    <p id="content1"></p>
+    <button onclick="showNext('step2')" id="btn1">Next</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2"></h2>
+    <p id="content2"></p>
+    <button onclick="showNext('step3')" id="btn2">Next</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3"></h2>
+    <p id="content3"></p>
+    <button onclick="showNext('step4')" id="btn3">Next</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4"></h2>
+    <p id="content4"></p>
+    <button onclick="showNext('step5')" id="btn4">Next</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5"></h2>
+    <p id="content5"></p>
+    <button onclick="showNext('step6')" id="btn5">Next</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6"></h2>
+    <p id="content6"></p>
+    <button onclick="showNext('step7')" id="btn6">Next</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7"></h2>
+    <p id="content7"></p>
+    <button onclick="showNext('step8')" id="btn7">Next</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8"></h2>
+    <p id="content8"></p>
+    <button onclick="goBack()" id="btn8">Go Back</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #054926;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    const data = {
+      en: [
+        ["1. Land Selection and Preparation", "Choose a well-drained, loamy soil with good fertility. Clear the land of weeds and debris. Plough and harrow the soil to loosen it and break clumps.", "Next"],
+        ["2. Seed Selection", "Use high-yielding, disease-resistant varieties suited for your region. Examples: SAMMAZ 32, SAMMAZ 15, etc.", "Next"],
+        ["3. Planting", "Plant at the onset of the rainy season. Spacing: 75 cm between rows and 25 cm between plants. Plant 1-2 seeds per hole at a depth of 3-5 cm.", "Next"],
+        ["4. Fertilizer Application", "Apply NPK fertilizer (15:15:15) two weeks after planting. Apply Urea or NPK again at 4-6 weeks for top dressing. Follow recommended rates (e.g., 300kg/ha).", "Next"],
+        ["5. Weed Control", "Weed manually or use herbicides. Weed 2-3 times or as needed. Keep the farm clean to reduce pest pressure.", "Next"],
+        ["6. Pest and Disease Management", "Scout regularly. Use pesticides and fungicides as needed. Control Fall Armyworm early using appropriate chemicals.", "Next"],
+        ["7. Harvesting", "Harvest 90-120 days after planting when cobs are dry. Harvest by hand or using machines. Dry cobs before storage.", "Next"],
+        ["8. Storage", "Store in a dry, well-ventilated place. Use bags or silos. Protect from rodents and insects with proper fumigation.", "Go Back"]
+      ],
+      ha: [
+        ["1. Zaɓin Wuri da Shirye-shiryen Gona", "Zaɓi ƙasa mai laushi da ba ta cika ruwa ba. Tsaftace gonar daga ciyawa da tarkace. Guga ƙasa da kyau domin ta kasance mai sauƙin dasa iri.", "Gaba"],
+        ["2. Zaɓin Iri", "Yi amfani da irin masara mai yawan amfanin gona da juriya ga cututtuka. Misalai: SAMMAZ 32, SAMMAZ 15, da sauransu.", "Gaba"],
+        ["3. Dasa Masara", "A fara dasa a lokacin farko na damina. Tazarar dasa: 75 cm tsakanin layuka da 25 cm tsakanin tsire-tsire. Dasa iri 1-2 a kowane rami mai zurfin 3-5 cm.", "Gaba"],
+        ["4. Feturiliza", "A zuba NPK (15:15:15) makonni biyu bayan dasawa. A ƙara Urea ko NPK bayan makonni 4-6. Bi shawarar amfani da gram 300 a kowace eka.", "Gaba"],
+        ["5. Yaki da Ciyawa", "A yi noman hannu ko amfani da magungunan kashe ciyawa. Yi hakan sau 2-3 ko fiye idan ya dace. A kula da tsaftar gona.", "Gaba"],
+        ["6. Yaki da Kwari da Cututtuka", "A rika duba amfanin gona akai-akai. A yi amfani da magunguna don kawar da kwari da cuta. A rika sarrafa kwarin Fall Armyworm da wuri.", "Gaba"],
+        ["7. Girbi", "A girbe masara tsakanin kwana 90 zuwa 120 bayan dasawa idan ta bushe. A girbe da hannu ko inji. A busar da masarar kafin a adana.", "Gaba"],
+        ["8. Ajiya", "A ajiye masara a wurin da ke bushe kuma yana da iska. A yi amfani da buhuna ko silos. A kare daga beraye da kwari da feshin magunguna.", "Komawa"]
+      ]
+    };
+
+    let currentLang = 'en';
+
+    function updateText() {
+      for (let i = 1; i <= 8; i++) {
+        document.getElementById(`title${i}`).innerText = data[currentLang][i-1][0];
+        document.getElementById(`content${i}`).innerText = data[currentLang][i-1][1];
+        document.getElementById(`btn${i}`).innerText = data[currentLang][i-1][2];
+      }
+    }
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      updateText();
+      goBack(); // Reset to first step
+    }
+
+    function showNext(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById("step1").style.display = "block";
+    }
+
+    // Initialize text on load
+    updateText();
+  </script>
+
+</body>
+</html>

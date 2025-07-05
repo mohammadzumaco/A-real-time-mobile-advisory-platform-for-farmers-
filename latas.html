@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Latas (Kale Guide)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-title-ha">🌾 Noman Latas (Kale)</h1>
+    <h1 id="main-title-en" style="display:none;">Kale (Latasa) Farming Guide</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html" id="nav-home-ha">Gida</a>
+    <a href="../ABOUTME.HTML" id="nav-about-ha">Game da Mu</a>
+    <a href="../contact.html" id="nav-contact-ha">Tuntube Mu</a>
+
+    <a href="#" id="nav-home-en" style="display:none;">Home</a>
+    <a href="#" id="nav-about-en" style="display:none;">About Us</a>
+    <a href="#" id="nav-contact-en" style="display:none;">Contact Us</a>
+  </nav>
+
+  <!-- Step 1 -->
+  <section id="step1">
+    <h2 id="title1-ha">1. Shirye-shiryen Gona</h2>
+    <p id="content1-ha">
+      Zaɓi ƙasa mai kyau, mai laushi, da kyauwar ban ruwa. Tsabtace filin daga ciyawa, duwatsu, da tarkace kafin shuka latas. Yi shinge ko amfani da itatuwa don kare gona daga dabbobi da kwari.
+    </p>
+    <h2 id="title1-en" style="display:none;">1. Land Preparation</h2>
+    <p id="content1-en" style="display:none;">
+      Choose good, loose, and well-drained soil. Clear the field from weeds, stones, and debris before planting kale. Fence the field or use trees to protect from animals and pests.
+    </p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 2 -->
+  <section id="step2" style="display:none">
+    <h2 id="title2-ha">2. Zaɓin Iri</h2>
+    <p id="content2-ha">
+      Zaɓi iri na latas waɗanda suka dace da yanayi da ban ruwa, musamman waɗanda suka jure cututtuka da kwari. Iri mai kyau yana taimaka wa amfanin gona ya yi yawa kuma lafiyayye.
+    </p>
+    <h2 id="title2-en" style="display:none;">2. Seed Selection</h2>
+    <p id="content2-en" style="display:none;">
+      Select kale seeds suitable for the climate and irrigation, especially those resistant to pests and diseases. Good seeds help increase yield and ensure healthy crops.
+    </p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 3 -->
+  <section id="step3" style="display:none">
+    <h2 id="title3-ha">3. Shuka Latas</h2>
+    <p id="content3-ha">
+      A shuka latas a cikin ramuka ko layuka. Bar nisan kusan 30cm tsakanin tsire-tsire da 50-60cm tsakanin layuka. Ban ruwa sosai bayan shuka don ƙasa ta sami danshi mai kyau.
+    </p>
+    <h2 id="title3-en" style="display:none;">3. Planting Kale</h2>
+    <p id="content3-en" style="display:none;">
+      Plant kale seeds in holes or rows. Leave about 30cm between plants and 50-60cm between rows. Water thoroughly after planting to ensure the soil is moist.
+    </p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 4 -->
+  <section id="step4" style="display:none">
+    <h2 id="title4-ha">4. Yin Amfani da Taki</h2>
+    <p id="content4-ha">
+      Yi amfani da taki mai nitrogen (N), phosphorus (P), da potassium (K) kamar NPK 15-15-15 kafin shuka da kuma lokacin girma don ƙara yawan latas da ƙarfafa tsiro.
+    </p>
+    <h2 id="title4-en" style="display:none;">4. Fertilizer Application</h2>
+    <p id="content4-en" style="display:none;">
+      Use fertilizers containing nitrogen (N), phosphorus (P), and potassium (K), such as NPK 15-15-15 before planting and during growth to increase kale yield and strengthen growth.
+    </p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 5 -->
+  <section id="step5" style="display:none">
+    <h2 id="title5-ha">5. Ban Ruwa a Tsarin LATAS (Irrigation)</h2>
+    <p id="content5-ha">
+      Yi ban ruwa na yau da kullum, musamman a lokacin zafi da bushewa. Ban ruwa na tsawon minti 30 zuwa 60 a kowace rana ko bisa bukata. Amfani da tsarin drip irrigation ko ban ruwa mai sauƙi zai taimaka wajen kiyaye ruwa da inganta girma.
+    </p>
+    <h2 id="title5-en" style="display:none;">5. Irrigation Using LATAS System</h2>
+    <p id="content5-en" style="display:none;">
+      Irrigate daily, especially during hot and dry periods. Water for 30 to 60 minutes each day or as needed. Using drip irrigation or simple irrigation systems helps conserve water and improve growth.
+    </p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 6 -->
+  <section id="step6" style="display:none">
+    <h2 id="title6-ha">6. Kulawa da Kwari da Cututtuka</h2>
+    <p id="content6-ha">
+      A lura da kwari kamar su ciyawa da cututtuka kamar ƙura da ƙwayoyin cuta. Idan an ga tsire-tsire na da matsala, cire su don hana yaduwa. Yi amfani da magungunan kashe kwari da cututtuka masu dacewa.
+    </p>
+    <h2 id="title6-en" style="display:none;">6. Pest and Disease Management</h2>
+    <p id="content6-en" style="display:none;">
+      Watch out for pests such as aphids and diseases like powdery mildew. Remove infected plants immediately to prevent spread. Use suitable pesticides and fungicides.
+    </p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 7 -->
+  <section id="step7" style="display:none">
+    <h2 id="title7-ha">7. Girbi da Ajiye Latas</h2>
+    <p id="content7-ha">
+      Girbi latas bayan wata 1 darabi zuwa 2, lokacin da ganyen suka yi kauri. A yanke ganye da kyau, a wanke su kafin a ajiye su a wuri mai sanyi da iska mai kyau don tsawon rayuwa.
+    </p>
+    <h2 id="title7-en" style="display:none;">7. Harvesting and Storage</h2>
+    <p id="content7-en" style="display:none;">
+      Harvest kale after 6 to 8 weeks when leaves are mature. Cut leaves carefully, wash before storing in a cool, well-ventilated place to prolong shelf life.
+    </p>
+    <button class="step-btn" onclick="restartGuide()">Fara Daga Farko / Restart</button>
+  </section>
+
+  <script>
+    function switchLang(lang) {
+      const haElements = document.querySelectorAll('[id$="-ha"]');
+      const enElements = document.querySelectorAll('[id$="-en"]');
+
+      if(lang === 'ha'){
+        haElements.forEach(el => el.style.display = 'block');
+        enElements.forEach(el => el.style.display = 'none');
+      } else {
+        haElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = 'block');
+      }
+    }
+
+    function showNext(currentStep) {
+      const stepNumber = currentStep.replace('step', '');
+      const nextStep = 'step' + (parseInt(stepNumber) + 1);
+
+      document.getElementById(currentStep).style.display = 'none';
+      const nextSection = document.getElementById(nextStep);
+      if(nextSection) {
+        nextSection.style.display = 'block';
+        window.scrollTo(0, 0);
+      }
+    }
+
+    function restartGuide() {
+      for(let i=1; i<=7; i++) {
+        const step = document.getElementById('step'+i);
+        step.style.display = (i===1) ? 'block' : 'none';
+      }
+      window.scrollTo(0, 0);
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #04611d;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

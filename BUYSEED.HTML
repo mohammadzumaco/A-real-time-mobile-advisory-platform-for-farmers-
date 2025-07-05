@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BUY SEED - SAYEN IRI</title>
+  <style>
+    /* Reset and base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #003a69;
+      color: white;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #003a69;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-size: 50px;
+      margin: 10px 30px 10px 0;
+      text-shadow: 2px 2px 4px #fff, -2px -2px 4px #000;
+    }
+    header h3 {
+      font-size: 24px;
+      margin: 10px 0;
+      opacity: 0.8;
+    }
+
+    /* Navigation Menu */
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    nav.navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav.navbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Gallery Grid - 3 images per row */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive: fewer columns on smaller screens */
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      header h1 {
+        font-size: 40px;
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 32px;
+        margin: 10px 0 0 0;
+      }
+      header h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      nav.navbar ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="second.html">Home</a></li>
+        <li><a href="ABOUTME.HTML">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h1>BUY SEED</h1>
+      <h3>(SAYEN IRI)</h3>
+    </div>
+  </header>
+
+  <div class="gallery">
+    <img src="./images/bell pepper.jpeg" alt="Bell Pepper" onclick="openWhatsApp('TASHI')" />
+    <img src="./images/cabage.webp" alt="Cabbage" onclick="openWhatsApp('kabeji')" />
+    <img src="./images/cassava.jpeg" alt="Cassava" onclick="openWhatsApp('rogo')" />
+    <img src="./images/CHILLI.jpeg" alt="Chilli" onclick="openWhatsApp('Image 5')" />
+    <img src="./images/DANKALIN HAUSA.jpeg" alt="Dankalin Hausa" onclick="openWhatsApp('dankalin hausa')" />
+    <img src="./images/DAWA.jpeg" alt="Dawa" onclick="openWhatsApp('dawa')" />
+    <img src="./images/GERO.jpeg" alt="Gero" onclick="openWhatsApp('GERO')" />
+    <img src="./images/GROUNDNUTS.jpeg" alt="Groundnuts" onclick="openWhatsApp('gyada')" />
+    <img src="./images/KARAS.jpeg" alt="Karas" onclick="openWhatsApp('KARAS')" />
+    <img src="./images/KUBEWA.jpeg" alt="Kubewa" onclick="openWhatsApp('KUBEWA')" />
+    <img src="./images/KUKUMBA.jpeg" alt="Kukumba" onclick="openWhatsApp('KUKUMBA')" />
+    <img src="./images/LATAS.jpeg" alt="Latas" onclick="openWhatsApp('LATAS')" />
+    <img src="./images/Maize.jpeg" alt="Maize" onclick="openWhatsApp('masara')" />
+    <img src="./images/onions.jpeg" alt="Onions" onclick="openWhatsApp('albasa')" />
+    <img src="./images/potatoes.jpeg" alt="Potatoes" onclick="openWhatsApp('potato')" />
+    <img src="./images/rice.jpeg" alt="Rice" onclick="openWhatsApp('shinkafa')" />
+    <img src="./images/RIDI.jpeg" alt="Ridi" onclick="openWhatsApp('RIDI')" />
+    <img src="./images/SOYABEANS.jpeg" alt="Soyabeans" onclick="openWhatsApp('soya beans')" />
+    <img src="./images/TARUGU.jpeg" alt="Tarugu" onclick="openWhatsApp('TARUGU')" />
+    <img src="images/tomato.webp" alt="Tomato" onclick="openWhatsApp('tumatur')" />
+    <img src="./images/TASHI.jpeg" alt="Tashi" onclick="openWhatsApp('tashshi')" />
+    <img src="./images/WAKE.jpeg" alt="Wake" onclick="openWhatsApp('wake')" />
+    <img src="./images/WATER MILLON.jpeg" alt="Watermelon" onclick="openWhatsApp('kankana')" />
+    <img src="./images/YAM.jpeg" alt="Yam" onclick="openWhatsApp('doya')" />
+  </div>
+
+  <script>
+    function openWhatsApp(itemName) {
+      const phoneNumber = "2347030494838";
+      const message = `Hello, I am interested in ${itemName}.`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>

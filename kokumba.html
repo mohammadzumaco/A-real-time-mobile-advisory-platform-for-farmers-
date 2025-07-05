@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Kokumba (Cucumber Guide)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-title-ha">🌾 Noman Kokumba (Cucumber)</h1>
+    <h1 id="main-title-en" style="display:none;">Cucumber (Kokumba) Farming Guide</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../second.html" id="nav-home-ha">Gida</a>
+    <a href="../ABOUTME.HTML" id="nav-about-ha">Game da Mu</a>
+    <a href="../contact.html" id="nav-contact-ha">Tuntube Mu</a>
+
+    <a href="#" id="nav-home-en" style="display:none;">Home</a>
+    <a href="#" id="nav-about-en" style="display:none;">About Us</a>
+    <a href="#" id="nav-contact-en" style="display:none;">Contact Us</a>
+  </nav>
+
+  <!-- Step 1 -->
+  <section id="step1">
+    <h2 id="title1-ha">1. Shirye-shiryen Gona</h2>
+    <p id="content1-ha">
+      Zaɓi ƙasa mai kyau, mai laushi, mai ɗan ɗumi, kuma mai kyauwar ban ruwa. Kokumba na buƙatar ƙasa mai yalwar taki da kyakkyawan tsarin drainage don guje wa tsananin ruwa a ƙasa. Tsabtace filin daga ciyawa da tarkace kafin shuka.
+    </p>
+    <h2 id="title1-en" style="display:none;">1. Land Preparation</h2>
+    <p id="content1-en" style="display:none;">
+      Choose good, loose, warm soil with good drainage. Cucumber requires fertile soil rich in nutrients and proper drainage to avoid waterlogging. Clear the field of weeds and debris before planting.
+    </p>
+    <button class="step-btn" onclick="showNext('step1')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 2 -->
+  <section id="step2" style="display:none">
+    <h2 id="title2-ha">2. Zaɓin Iri</h2>
+    <p id="content2-ha">
+      Zaɓi iri na kokumba waɗanda suka dace da yanayin ku. Ana samun iri masu tsire tsawo da kuma waɗanda suke shuka gajere. Zaɓi iri mai jure cututtuka da kwari don samun amfanin gona mai kyau.
+    </p>
+    <h2 id="title2-en" style="display:none;">2. Seed Selection</h2>
+    <p id="content2-en" style="display:none;">
+      Select cucumber varieties suitable for your climate. There are long-vining and bush types. Choose seeds resistant to pests and diseases for a better yield.
+    </p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 3 -->
+  <section id="step3" style="display:none">
+    <h2 id="title3-ha">3. Shuka Kokumba</h2>
+    <p id="content3-ha">
+      A shuka iri a cikin layuka ko ramuka, a bar nisan kusan 30-45cm tsakanin tsire-tsire da 90-120cm tsakanin layuka. Ana iya fara shuka a cikin masaka sannan a dasa a waje bayan tsiro.
+    </p>
+    <h2 id="title3-en" style="display:none;">3. Planting Cucumber</h2>
+    <p id="content3-en" style="display:none;">
+      Plant seeds in rows or holes, spacing 30-45cm between plants and 90-120cm between rows. Seeds can be started in nurseries and transplanted outdoors after seedlings develop.
+    </p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 4 -->
+  <section id="step4" style="display:none">
+    <h2 id="title4-ha">4. Yin Amfani da Taki</h2>
+    <p id="content4-ha">
+      Yi amfani da taki mai nitrogen (N), phosphorus (P), da potassium (K) musamman NPK 15-15-15 ko taki mai kyau a lokacin shuka da girma don ƙara yawan amfanin gona. Ana iya amfani da taki na zamani ko taki na gargajiya kamar taki na dabbobi.
+    </p>
+    <h2 id="title4-en" style="display:none;">4. Fertilizer Application</h2>
+    <p id="content4-en" style="display:none;">
+      Use fertilizers containing nitrogen (N), phosphorus (P), and potassium (K), especially NPK 15-15-15 or organic manure at planting and during growth to increase yield. Modern or organic fertilizers can be used.
+    </p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 5 -->
+  <section id="step5" style="display:none">
+    <h2 id="title5-ha">5. Ban Ruwa (Irrigation)</h2>
+    <p id="content5-ha">
+      Kokumba na buƙatar ban ruwa na yau da kullum, musamman a lokacin bushewa. Yi ban ruwa sau 2 zuwa 3 a mako, ko kuma ta hanyar drip irrigation domin kiyaye danshi a ƙasa ba tare da ɓata ruwa ba.
+    </p>
+    <h2 id="title5-en" style="display:none;">5. Irrigation</h2>
+    <p id="content5-en" style="display:none;">
+      Cucumber requires regular watering, especially during dry periods. Water 2-3 times per week or use drip irrigation to conserve water and maintain soil moisture.
+    </p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 6 -->
+  <section id="step6" style="display:none">
+    <h2 id="title6-ha">6. Kare Tsire-Tsire daga Kwari da Cututtuka</h2>
+    <p id="content6-ha">
+      Kula da kwari kamar su aphids, caterpillars, da cututtuka kamar ƙurar farin (powdery mildew). Yi amfani da magungunan kashe kwari da fungicides masu dacewa, sannan a cire tsire-tsire masu cutarwa don hana yaduwa.
+    </p>
+    <h2 id="title6-en" style="display:none;">6. Pest and Disease Control</h2>
+    <p id="content6-en" style="display:none;">
+      Monitor for pests like aphids, caterpillars, and diseases such as powdery mildew. Use appropriate pesticides and fungicides, and remove infected plants promptly to prevent spread.
+    </p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba / Next</button>
+  </section>
+
+  <!-- Step 7 -->
+  <section id="step7" style="display:none">
+    <h2 id="title7-ha">7. Girbi da Ajiye Kokumba</h2>
+    <p id="content7-ha">
+      Kokumba na shirya girbi bayan kwanaki 50 zuwa 70 daga shuka. A yanke kokumba yayin da suke da girman da ya dace, a kula kada su yi tsufa a cikin gona. A ajiye su a wuri mai sanyi da iska mai kyau domin tsawaita rayuwa.
+    </p>
+    <h2 id="title7-en" style="display:none;">7. Harvesting and Storage</h2>
+    <p id="content7-en" style="display:none;">
+      Cucumbers are ready to harvest 50 to 70 days after planting. Pick them when they reach appropriate size, avoid over-maturity in the field. Store in a cool, well-ventilated place to extend shelf life.
+    </p>
+    <button class="step-btn" onclick="restartGuide()">Fara Daga Farko / Restart</button>
+  </section>
+
+  <script>
+    function switchLang(lang) {
+      const haElements = document.querySelectorAll('[id$="-ha"]');
+      const enElements = document.querySelectorAll('[id$="-en"]');
+
+      if(lang === 'ha'){
+        haElements.forEach(el => el.style.display = 'block');
+        enElements.forEach(el => el.style.display = 'none');
+      } else {
+        haElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = 'block');
+      }
+    }
+
+    function showNext(currentStepId) {
+      const currentStepNum = parseInt(currentStepId.replace('step',''));
+      const currentSection = document.getElementById(currentStepId);
+      const nextStepNum = currentStepNum + 1;
+      const nextSection = document.getElementById('step' + nextStepNum);
+
+      if(nextSection){
+        currentSection.style.display = 'none';
+        nextSection.style.display = 'block';
+        window.scrollTo(0,0);
+      }
+    }
+
+    function restartGuide(){
+      for(let i=1; i<=7; i++){
+        document.getElementById('step' + i).style.display = i === 1 ? 'block' : 'none';
+      }
+      window.scrollTo(0,0);
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #024926;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

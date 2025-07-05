@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrot (Karas)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff8c00;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff8c00;
+    }
+
+    .info-section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .info-section h2 {
+      color: #333;
+    }
+
+    .info-section p {
+      color: #000000;
+      text-align: center;
+      display: flex;
+      font-weight: bold;
+
+    }
+
+    .language-switch {
+      text-align: right;
+      margin: 10px;
+    }
+
+    .language-switch button {
+      padding: 10px 20px;
+      background-color: #ff9900;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .language-switch button:hover {
+      background-color: #ffbc58;
+    }
+
+    .hausa, .english {
+      display: none;
+    }
+
+    .navigation-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .navigation-buttons button {
+      background-color: #ff9662;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navigation-buttons button:hover {
+      background-color: rgb(181, 111, 13);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: black;font-family: 'Courier New', Courier, monospace;font-weight: bolder;">🌾 Carrot (Karas)</h1>
+  </header>
+
+  <div class="language-switch">
+    <button onclick="showHausa()">Hausa</button>
+    <button onclick="showEnglish()">English</button>
+    <nav>
+      <a href="../second.html">Home</a>
+      <a href="../ABOUTME.HTML">About Us</a>
+      <a href="../contact.html">Contact Us</a>
+    </nav>
+  
+  </div>
+
+  <div class="content">
+    <!-- Hausa Section -->
+    <div class="hausa" id="hausa">
+      <div class="info-section" id="hausa-step"></div>
+      <div class="navigation-buttons">
+        <button onclick="prevStep('hausa')">Previous Step</button>
+        <button onclick="nextStep('hausa')">Next Step</button>
+      </div>
+    </div>
+
+    <!-- English Section -->
+    <div class="english" id="english">
+      <div class="info-section" id="english-step"></div>
+      <div class="navigation-buttons">
+        <button onclick="prevStep('english')">Previous Step</button>
+        <button onclick="nextStep('english')">Next Step</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hausaSteps = [
+      { title: "Gabatarwa", content: "Karas kayan lambu ne mai launin ruwan dorawa ko orange wanda ke da sinadarin bitamin A da yawa..." },
+      { title: "Lokacin Dasawa", content: "Karas yafi dacewa da lokacin damina..." },
+      { title: "Nau'in Ƙasa", content: "Karas na bukatar ƙasa mai laushi..." },
+      { title: "Irin da Za a Dasa", content: "Ana samun iri da dama..." },
+      { title: "Yadda Ake Dasawa", content: "A hura layi da tazarar inci 1-2..." },
+      { title: "Yin Shuka", content: "A tabbatar da ruwa na isa..." },
+      { title: "Yaki da Kwari da Cututtuka", content: "A kula da kwari kamar cutar..." },
+      { title: "Lokacin Girbi", content: "A girbe karas bayan makonni 10 zuwa 12..." },
+      { title: "Amfanin Karas", content: "Karas na da amfani ga lafiyar ido..." },
+    ];
+
+    const englishSteps = [
+      { title: "Introduction", content: "Carrot is an orange-colored root vegetable rich in vitamin A..." },
+      { title: "Planting Season", content: "Carrots grow best during the rainy season..." },
+      { title: "Soil Type", content: "Carrots prefer loose, sandy loam soil..." },
+      { title: "Seed Varieties", content: "Popular carrot varieties include..." },
+      { title: "Planting Method", content: "Sow seeds in rows 1–2 inches apart..." },
+      { title: "Watering", content: "Ensure adequate watering..." },
+      { title: "Pest and Disease Control", content: "Watch for pests like leaf blight..." },
+      { title: "Harvest Time", content: "Carrots are ready for harvest 10–12 weeks..." },
+      { title: "Benefits of Carrots", content: "Carrots are good for eye health..." },
+    ];
+
+    let hausaIndex = 0;
+    let englishIndex = 0;
+
+    function showHausa() {
+      document.getElementById('hausa').style.display = 'block';
+      document.getElementById('english').style.display = 'none';
+      updateStep('hausa');
+    }
+
+    function showEnglish() {
+      document.getElementById('english').style.display = 'block';
+      document.getElementById('hausa').style.display = 'none';
+      updateStep('english');
+    }
+
+    function nextStep(lang) {
+      if (lang === 'hausa' && hausaIndex < hausaSteps.length - 1) {
+        hausaIndex++;
+        updateStep('hausa');
+      } else if (lang === 'english' && englishIndex < englishSteps.length - 1) {
+        englishIndex++;
+        updateStep('english');
+      }
+    }
+
+    function prevStep(lang) {
+      if (lang === 'hausa' && hausaIndex > 0) {
+        hausaIndex--;
+        updateStep('hausa');
+      } else if (lang === 'english' && englishIndex > 0) {
+        englishIndex--;
+        updateStep('english');
+      }
+    }
+
+    function updateStep(lang) {
+      if (lang === 'hausa') {
+        const step = hausaSteps[hausaIndex];
+        document.getElementById('hausa-step').innerHTML = `<h2>${step.title}</h2><p>${step.content}</p>`;
+      } else {
+        const step = englishSteps[englishIndex];
+        document.getElementById('english-step').innerHTML = `<h2>${step.title}</h2><p>${step.content}</p>`;
+      }
+    }
+
+    // Show English by default
+    window.onload = showEnglish;
+  </script>
+  <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #ff8b2c;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

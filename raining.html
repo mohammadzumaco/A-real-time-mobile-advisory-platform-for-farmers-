@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irrigation Farming</title>
+  <style>
+    body {
+      background-image: url('../irrigation/images/raining.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4ed9fc;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    .navbar li {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: green;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      text-shadow: 2px 2px 4px rgb(255, 255, 255), -2px -2px 4px rgb(0, 0, 0);
+    }
+
+    .crop-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      margin-top: 20px;
+    }
+
+    .crop-list a {
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      display: block;
+    }
+
+    .crop-list img {
+      width: 100%;
+      max-width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto 10px;
+      box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+    }
+
+    .crop-list span {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .navbar a {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 8px 0;
+      }
+
+      .navbar li {
+        margin: 0 10px;
+      }
+
+      .crop-list {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+      }
+
+      .crop-list img {
+        height: 130px;
+      }
+
+      .crop-list span {
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../second.html">Home</a></li>
+        <li><a href="../ABOUTME.HTML">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Rainy Farming {NOMAN DAMINA}</h1>
+    <div class="crop-list">
+      <a href="crop information/masara.html">
+        <img src="./images/Maize.jpeg" alt="Maize">
+        <span>Maize (masara)</span>
+      </a>
+      <a href="crop information/rice.html">
+        <img src="./images/rice.jpeg" alt="rice">
+        <span>RICE/paddy (shinkafa)</span>
+      </a>
+      <a href="cassava.html">
+        <img src="./images/cassava.jpeg" alt="cassava">
+        <span>cassava (ROGO)</span>
+      </a>
+      <a href="crop information/soyabeans.html">
+        <img src="./images/SOYABEANS.jpeg" alt="soyabean">
+        <span>soyabean (WAKEN SUYA)</span>
+      </a>
+      <a href="gero.html">
+        <img src="./images/GERO.jpeg" alt="GERO">
+        <span>gram (GERO)</span>
+      </a>
+      <a href="../raining/crop information/dawa.html">
+        <img src="./images/DAWA.jpeg" alt="GUINEA">
+        <span>GUINEA (DAWA)</span>
+      </a>
+      <a href="../raining/crop information/ridi.html">
+        <img src="./images/RIDI.jpeg" alt="RIDI">
+        <span>sesame (RIDI)</span>
+      </a>
+      <a href="../raining/crop information/kubewa.html">
+        <img src="./images/KUBEWA.jpeg" alt="KUBEWA">
+        <span>OKRA (KUBEWA)</span>
+      </a>
+      <a href="../raining/crop information/gyada.html">
+        <img src="./images/GROUNDNUTS.jpeg" alt="groundnu">
+        <span>groundnut (GYADA)</span>
+      </a>
+      <a href="../raining/crop information/doya.html">
+        <img src="./images/YAM.jpeg" alt="YAM">
+        <span>YAM (DOYA)</span>
+      </a>
+      <a href="../raining/crop information/tashshi.htm">
+        <img src="./images/CHILLI.jpeg" alt="TASHSHI">
+        <span>CHILLI (TASHI)</span>
+      </a>
+      <a href="../raining/crop information/tashshi.htm">
+        <img src="./images/WAKE.jpeg" alt="WAKE">
+        <span>BEANS (WAKE)</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

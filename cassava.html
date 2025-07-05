@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rogo Farming Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #000000;
+      color: #333;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ffffff;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      background-color: #2d572c;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1b3a1c;
+    }
+
+    #english-content, #hausa-content {
+      display: none;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+      margin-top: 20px;
+    }
+
+    /* Show default English on page load */
+    #english-content.show,
+    #hausa-content.show {
+      display: block;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🌾 Rogo (Cassava) Farming Guide</h2>
+
+  <div style="text-align: center;">
+    <button onclick="showEnglish()">Show in English</button>
+    <button onclick="showHausa()">Show in Hausa</button>
+    <nav>
+      <button><a href="../raining.html">Back to HOME</a></button>
+     
+    </nav>
+  
+  </div>
+
+  <div id="english-content" class="show">
+    <h3>1. Introduction</h3>
+    <p>Cassava (<i>Manihot esculenta</i>) is a vital staple crop in Nigeria. It thrives in tropical climates and provides carbohydrates for millions.</p>
+
+    <h3>2. Optimal Growing Conditions</h3>
+    <ul>
+      <li><b>Climate:</b> Warm (25°C–32°C)</li>
+      <li><b>Rainfall:</b> 1000–1500 mm annually</li>
+      <li><b>Soil:</b> Well-drained sandy loam (pH 5.5–6.5)</li>
+      <li><b>Sunlight:</b> Full sunlight needed</li>
+    </ul>
+
+    <h3>3. Land Preparation</h3>
+    <p>Clear weeds, plough the land, and form ridges to support tuber growth.</p>
+
+    <h3>4. Cassava Varieties</h3>
+    <ul>
+      <li>TME 419</li>
+      <li>TMS 98/0505</li>
+      <li>Vitamin A-rich (e.g., UMUCASS 36)</li>
+    </ul>
+
+    <h3>5. Planting</h3>
+    <ul>
+      <li>Use 20–25 cm healthy stem cuttings</li>
+      <li>Spacing: 1m x 1m</li>
+      <li>Plant cuttings vertically or slanted into the soil</li>
+    </ul>
+
+    <h3>6. Crop Management</h3>
+    <p>Weed regularly, apply NPK fertilizer as needed, and monitor pests/diseases like cassava mosaic virus.</p>
+
+    <h3>7. Harvesting</h3>
+    <p>Harvest 9–12 months after planting by uprooting the tubers carefully.</p>
+
+    <h3>8. Uses</h3>
+    <ul>
+      <li>Garri</li>
+      <li>Fufu</li>
+      <li>Cassava flour</li>
+      <li>Starch</li>
+    </ul>
+  </div>
+
+  <div id="hausa-content">
+    <h3>1. Gabatarwa</h3>
+    <p>Rogo (<i>Manihot esculenta</i>) amfanin gona ne mai mahimmanci a Najeriya, yana da amfani da yawa a cikin abinci.</p>
+
+    <h3>2. Yanayin Dasa Rogo</h3>
+    <ul>
+      <li><b>Yanayi:</b> Zafi mai kyau tsakanin 25°C zuwa 32°C</li>
+      <li><b>Ruwan sama:</b> 1000–1500 mm a shekara</li>
+      <li><b>Kasa:</b> Kasa mai laushi, mai fitar ruwa da pH 5.5–6.5</li>
+      <li><b>Hasken rana:</b> Bukatar cikakken haske</li>
+    </ul>
+
+    <h3>3. Shirya Kasa/ gyaran gona</h3>
+    <p>Cire ciyayi, noma kasa sosai, da yin tudu domin taimakawa ci gaban tubers na rogo.</p>
+
+    <h3>4. Nau’ikan Rogo</h3>
+    <ul>
+      <li>TME 419</li>
+      <li>TMS 98/0505</li>
+      <li>Nau’ikan Vitamin A kamar UMUCASS 36</li>
+    </ul>
+
+    <h3>5. Shuka</h3>
+    <ul>
+      <li>Yi amfani da sanda mai tsawon 20–25 cm daga lafiyayyen rogo</li>
+      <li>Tazara: 1m x 1m</li>
+      <li>Saka sandan a tsaye ko a ɗan karkace cikin ƙasa</li>
+    </ul>
+
+    <h3>6. Kulawa da Rogo</h3>
+    <p>Cire ciyayi akai-akai, amfani da taki NPK, da kula da kwari da cututtuka kamar mosaic virus.</p>
+
+    <h3>7. Girbi</h3>
+    <p>Rogo yana girma bayan watanni 9–12. A girbe shi ta hanyar tono da hankali ba tare da lalata ba.</p>
+
+    <h3>8. Amfani da Rogo</h3>
+    <ul>
+      <li>Garri</li>
+      <li>Fufu</li>
+      <li>Farin rogo</li>
+      <li>Starch</li>
+    </ul>
+  </div>
+
+  <script>
+    function showEnglish() {
+      document.getElementById('english-content').classList.add('show');
+      document.getElementById('hausa-content').classList.remove('show');
+    }
+
+    function showHausa() {
+      document.getElementById('hausa-content').classList.add('show');
+      document.getElementById('english-content').classList.remove('show');
+    }
+  </script>
+ <footer style="  
+ text-align: center;
+ padding: 10px;
+ background-color: #010101;
+ color: white;
+ font-size: 14px;
+">
+ &copy; MZUMACO 2025
+</footer>
+</body>
+</html>

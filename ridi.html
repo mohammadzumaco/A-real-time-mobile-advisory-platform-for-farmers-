@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Ridi (Sesame)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌾Noman Ridi (Sesame)</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <button style="background-color: #255426;"><a href="../raining.html">Back to HOME</a></button>
+  </nav>
+
+  <section id="step1">
+    <h2 id="title1">1. Shirye-shiryen Gona</h2>
+    <p id="content1">Zaɓi ƙasa mai kyau da hasken rana sosai. A tsabtace gona da noman farko kafin damina ta fara.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">Zaɓi irin ridi masu yawan amfanin gona da juriya kamar Ex-Sudan, NCRIBEN-01M da NCRIBEN-04E.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Dasa</h2>
+    <p id="content3">A dasa iri kai tsaye a ƙasa da nisan 60cm x 10cm. A yi dasa da zarar an samu isasshen ruwan sama.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Feturiliza</h2>
+    <p id="content4">A yi amfani da NPK 15:15:15 ko DAP kafin dasa, sai a ƙara Urea bayan tsire-tsire sun fara girma.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Yaki da Ciyawa</h2>
+    <p id="content5">A yi noman hannu da hannu sau biyu a lokacin girma domin hana ciyawa hana girma.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Yaki da Kwari da Cututtuka</h2>
+    <p id="content6">A lura da kwari kamar grasshoppers da whiteflies. A yi amfani da magunguna masu dacewa idan ya zama dole.</p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Girbi</h2>
+    <p id="content7">Ridi yana shirye a girbe cikin watanni 3-4. A girbe lokacin da 'ya'yan suka soma bushewa amma kafin su fadi.</p>
+    <button class="step-btn" onclick="showNext('step8')">Gaba</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8">8. Ajiya da Amfani</h2>
+    <p id="content8">A busar da ridi sosai kafin a ajiye. Ana amfani da shi wajen yin mai, abinci, da kayan kwalliya.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #0a7537;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    const hausaSteps = [
+      "Shirye-shiryen Gona", "Zaɓin Iri", "Dasa", "Feturiliza", "Yaki da Ciyawa",
+      "Yaki da Kwari da Cututtuka", "Girbi", "Ajiya da Amfani"
+    ];
+
+    const hausaContents = [
+      "Zaɓi ƙasa mai kyau da hasken rana sosai. A tsabtace gona da noman farko kafin damina ta fara.",
+      "Zaɓi irin ridi masu yawan amfanin gona da juriya kamar Ex-Sudan, NCRIBEN-01M da NCRIBEN-04E.",
+      "A dasa iri kai tsaye a ƙasa da nisan 60cm x 10cm. A yi dasa da zarar an samu isasshen ruwan sama.",
+      "A yi amfani da NPK 15:15:15 ko DAP kafin dasa, sai a ƙara Urea bayan tsire-tsire sun fara girma.",
+      "A yi noman hannu da hannu sau biyu a lokacin girma domin hana ciyawa hana girma.",
+      "A lura da kwari kamar grasshoppers da whiteflies. A yi amfani da magunguna masu dacewa idan ya zama dole.",
+      "Ridi yana shirye a girbe cikin watanni 3-4. A girbe lokacin da 'ya'yan suka soma bushewa amma kafin su fadi.",
+      "A busar da ridi sosai kafin a ajiye. Ana amfani da shi wajen yin mai, abinci, da kayan kwalliya."
+    ];
+
+    const englishSteps = [
+      "Land Preparation", "Seed Selection", "Planting", "Fertilization", "Weed Control",
+      "Pest and Disease Control", "Harvesting", "Storage and Usage"
+    ];
+
+    const englishContents = [
+      "Choose fertile, sunny land and clear the field. Prepare the land early before the rainy season begins.",
+      "Select high-yield, disease-resistant sesame varieties like Ex-Sudan, NCRIBEN-01M, and NCRIBEN-04E.",
+      "Direct seed into soil at spacing of 60cm x 10cm. Plant when rainfall is adequate.",
+      "Apply NPK 15:15:15 or DAP before planting, then supplement with Urea during growth.",
+      "Weed manually at least twice to prevent competition.",
+      "Watch for pests like grasshoppers and whiteflies. Use appropriate insecticides when necessary.",
+      "Sesame matures in 3–4 months. Harvest when pods begin to dry but before they shatter.",
+      "Dry sesame well before storage. It’s used for oil, food, and cosmetics."
+    ];
+
+    function showNext(id) {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById("step1").style.display = "block";
+    }
+
+    function switchLang(lang) {
+      const titles = document.querySelectorAll("h2[id^='title']");
+      const contents = document.querySelectorAll("p[id^='content']");
+      for (let i = 0; i < titles.length; i++) {
+        titles[i].innerText = lang === 'ha' ? (i + 1) + ". " + hausaSteps[i] : (i + 1) + ". " + englishSteps[i];
+        contents[i].innerText = lang === 'ha' ? hausaContents[i] : englishContents[i];
+      }
+    }
+  </script>
+
+</body>
+</html>

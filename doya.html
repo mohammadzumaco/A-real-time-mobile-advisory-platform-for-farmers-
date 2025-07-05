@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagorar Noman Doya (Yam)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fdf5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f612e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .language-buttons {
+      margin-top: 10px;
+    }
+
+    .language-buttons button {
+      background-color: white;
+      color: #2f612e;
+      border: none;
+      padding: 6px 12px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #255426;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #2f612e;
+      text-align: center;
+    }
+
+    button.step-btn {
+      display: block;
+      background-color: #2f612e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px auto;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.step-btn:hover {
+      background-color: #255426;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌾Noman Doya (Yam)</h1>
+    <div class="language-buttons">
+      <button onclick="switchLang('ha')">Hausa</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <button style="background-color: #255426;"><a href="../raining.html">Back to HOME</a></button>
+
+  </nav>
+
+  <section id="step1">
+    <h2 id="title1">1. Shirye-shiryen Gona</h2>
+    <p id="content1">Zaɓi ƙasa mai kyau, mai laushi kuma mai kyau don shuka doya. A tsabtace gona daga ciyawa da duwatsu kafin a fara.</p>
+    <button class="step-btn" onclick="showNext('step2')">Gaba</button>
+  </section>
+
+  <section id="step2" style="display:none">
+    <h2 id="title2">2. Zaɓin Iri</h2>
+    <p id="content2">Zaɓi irin doya masu kyau, masu lafiya kuma masu juriya ga cututtuka don samun amfanin gona mai yawa.</p>
+    <button class="step-btn" onclick="showNext('step3')">Gaba</button>
+  </section>
+
+  <section id="step3" style="display:none">
+    <h2 id="title3">3. Shuka Doya</h2>
+    <p id="content3">A shuka tubers (ƙwayoyin doya) a zurfin kusan 10cm, da nisan kusan 50cm tsakanin kowanne da 1m tsakanin layi.</p>
+    <button class="step-btn" onclick="showNext('step4')">Gaba</button>
+  </section>
+
+  <section id="step4" style="display:none">
+    <h2 id="title4">4. Yin Amfani da Taki</h2>
+    <p id="content4">A yi amfani da taki mai nitrogen, phosphorus, da potassium kafin dasa da kuma lokacin girma don ƙara yawan amfanin gona.</p>
+    <button class="step-btn" onclick="showNext('step5')">Gaba</button>
+  </section>
+
+  <section id="step5" style="display:none">
+    <h2 id="title5">5. Kulawa da Ciyawa</h2>
+    <p id="content5">A yi noman hannu ko amfani da magunguna don kawar da ciyawa domin kada su hana girman doya.</p>
+    <button class="step-btn" onclick="showNext('step6')">Gaba</button>
+  </section>
+
+  <section id="step6" style="display:none">
+    <h2 id="title6">6. Kula da Kwari da Cututtuka</h2>
+    <p id="content6">A lura da kwari da cututtuka kamar su ƙwari, fungus da cutar fure. A yi amfani da magunguna masu dacewa idan ya zama dole.</p>
+    <button class="step-btn" onclick="showNext('step7')">Gaba</button>
+  </section>
+
+  <section id="step7" style="display:none">
+    <h2 id="title7">7. Girbi Doya</h2>
+    <p id="content7">Doya tana girma cikin kwanaki 150-180. A girbe lokacin da ganyen ya fara bushewa kuma tubers sun yi girma sosai.</p>
+    <button class="step-btn" onclick="showNext('step8')">Gaba</button>
+  </section>
+
+  <section id="step8" style="display:none">
+    <h2 id="title8">8. Ajiya da Amfani</h2>
+    <p id="content8">A ajiye doya a wuri mai iska da bushe. Ana amfani da doya a abinci iri-iri kamar doya da miya ko doya mai daɗi.</p>
+    <button class="step-btn" onclick="goBack()">Komawa Farko</button>
+  </section>
+  <footer style="  
+  text-align: center;
+  padding: 10px;
+  background-color: #010101;
+  color: white;
+  font-size: 14px;
+ ">
+  &copy; MZUMACO 2025
+ </footer>
+  <script>
+    const hausaSteps = [
+      "Shirye-shiryen Gona",
+      "Zaɓin Iri",
+      "Shuka Doya",
+      "Yin Amfani da Taki",
+      "Kulawa da Ciyawa",
+      "Kula da Kwari da Cututtuka",
+      "Girbi Doya",
+      "Ajiya da Amfani"
+    ];
+
+    const hausaContents = [
+      "Zaɓi ƙasa mai kyau, mai laushi kuma mai kyau don shuka doya. A tsabtace gona daga ciyawa da duwatsu kafin a fara.",
+      "Zaɓi irin doya masu kyau, masu lafiya kuma masu juriya ga cututtuka don samun amfanin gona mai yawa.",
+      "A shuka tubers (ƙwayoyin doya) a zurfin kusan 10cm, da nisan kusan 50cm tsakanin kowanne da 1m tsakanin layi.",
+      "A yi amfani da taki mai nitrogen, phosphorus, da potassium kafin dasa da kuma lokacin girma don ƙara yawan amfanin gona.",
+      "A yi noman hannu ko amfani da magunguna don kawar da ciyawa domin kada su hana girman doya.",
+      "A lura da kwari da cututtuka kamar su ƙwari, fungus da cutar fure. A yi amfani da magunguna masu dacewa idan ya zama dole.",
+      "Doya tana girma cikin kwanaki 150-180. A girbe lokacin da ganyen ya fara bushewa kuma tubers sun yi girma sosai.",
+      "A ajiye doya a wuri mai iska da bushe. Ana amfani da doya a abinci iri-iri kamar doya da miya ko doya mai daɗi."
+    ];
+
+    const englishSteps = [
+      "Land Preparation",
+      "Seed Selection",
+      "Yam Planting",
+      "Fertilization",
+      "Weed Control",
+      "Pest and Disease Management",
+      "Yam Harvesting",
+      "Storage and Usage"
+    ];
+
+    const englishContents = [
+      "Choose good, loose, and fertile soil for planting yam. Clear the field of weeds and stones before planting.",
+      "Select healthy, high-quality yam tubers resistant to diseases for better yield.",
+      "Plant tubers about 10cm deep with spacing approximately 50cm between plants and 1m between rows.",
+      "Apply fertilizers containing nitrogen, phosphorus, and potassium before planting and during growth to increase yield.",
+      "Control weeds manually or with herbicides to prevent competition for nutrients.",
+      "Monitor pests and diseases such as insects, fungi, and leaf blight. Use appropriate pesticides when necessary.",
+      "Yam matures in 150-180 days. Harvest when leaves start to dry and tubers have fully developed.",
+      "Store yam in a dry, well-ventilated place. Yam is used in various dishes like pounded yam or yam porridge."
+    ];
+
+    function showNext(id) {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function goBack() {
+      document.querySelectorAll("section").forEach(s => s.style.display = "none");
+      document.getElementById("step1").style.display = "block";
+    }
+
+    function switchLang(lang) {
+      const titles = document.querySelectorAll("h2[id^='title']");
+      const contents = document.querySelectorAll("p[id^='content']");
+      for (let i = 0; i < titles.length; i++) {
+        titles[i].innerText = lang === 'ha' ? (i + 1) + ". " + hausaSteps[i] : (i + 1) + ". " + englishSteps[i];
+        contents[i].innerText = lang === 'ha' ? hausaContents[i] : englishContents[i];
+      }
+      // Also update header title
+      document.querySelector("header h1").innerText = lang === 'ha' ? "Jagorar Noman Doya (Yam)" : "Yam Farming Guide";
+    }
+  </script>
+
+</body>
+</html>
